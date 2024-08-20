@@ -56,3 +56,16 @@
 
 ## Install Node.js
 * [Node.js](https://nodejs.org/en/)
+
+## REPL
+The Node.js Read-Eval-Print-Loop (REPL) is an interactive shell taht processes Node.js expressions. The shell **reads** JavaScript code the user enters, **eval** uates the result of interpreting the line of code, **prints** the result to the user, and **loops** until the user signals to quit.
+
+```js
+$ node
+> const name = 'adriano'
+undefined
+> name
+'adriano'
+> CTRL + C
+(To exit, press CTRL + C again or CTRL + D or type .exit)
+```
