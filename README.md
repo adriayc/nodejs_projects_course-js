@@ -12,3 +12,10 @@
 * Callbacks, Promises, Async-Await
 * YouTube - Coding Addict
 * Playlist - JS Nuggets  
+
+## Structure
+* Intro
+* Install
+* Node Fundamentals
+* Express Tutorial
+* Building Apps...
