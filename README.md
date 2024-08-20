@@ -37,3 +37,19 @@
     * Svelte Intellisense
     * vscode-styled-components
     * DotENV
+
+## Browser vs Server
+* __Browser__
+  - DOM
+  - Window
+  - Interactive Apps
+  - No Filesystem
+  - Fragmentation
+  - ES6 Modules
+* __Node.js__
+  - No DOM
+  - No Window
+  - Serer Side Apps
+  - Filesystem
+  - Versions
+  - CommonJS
