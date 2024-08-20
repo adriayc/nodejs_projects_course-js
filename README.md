@@ -19,3 +19,21 @@
 * Node Fundamentals
 * Express Tutorial
 * Building Apps...
+
+## Text Editor
+* VSCode
+  - Extensions:
+    * Auto Rename Tag
+    * Bracket Pair Colorizer
+    * ES7 React/Redux/GraphQL/React-Native snippets
+    * indent-rainbow
+    * Live Server
+    * MDX
+    * Prettier - Code formatter
+    * Preview on Web Server
+    * Quokka.js
+    * Svelte
+    * Svelte 3 Snippets
+    * Svelte Intellisense
+    * vscode-styled-components
+    * DotENV
