@@ -80,6 +80,10 @@
   - Duplex
   - Transform
 
+* END OF SECTION
+  - DONE WITH NODE FUNDAMENTAL
+  - NEXT STOP CREATING SERVERS
+
 * VSCode Commands:
   - CTRL + ` - Open terminal
   - CTRL + C - Stop the app from running
