@@ -36,6 +36,7 @@
   - Install package globally
     + Nodemon
       $ npm install -g nodemon
+  - package-lock.json is automatically generated for any operations where npm modifies either the npm_modules tree, or package.json
   - Run app
     $ node <fileName>.js
     $ npm start
