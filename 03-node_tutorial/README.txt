@@ -32,7 +32,10 @@
       $ npm i nodemon -D
   - Uninstall dependencies (E.G. - npm uninstall packageName)
     $ npm uninstall bootstrap
-    NOTE: Another way - remove the dependency or dependencies on package-json, node_modules, package-lock.json and 'npm install'
+    NOTE: Another way - remove the dependency or dependencies on package-json, node_modules, package-lock.json and run 'npm install'
+  - Install package globally
+    + Nodemon
+      $ npm install -g nodemon
   - Run app
     $ node <fileName>.js
     $ npm start
