@@ -3,7 +3,9 @@
 const names = require('./04-names');
 // const { adrian, peter } = require('./04-names');
 const sayHi = require('./05-utils');
+const data = require('./06-alternative-flavor');
 // console.log(names);
+console.log(data);
 
 sayHi('susan');
 // sayHi(adrian);
