@@ -58,6 +58,11 @@
     $ git clone SSH_URL
     $ npm install
 
+* UPCOMING TOPICS
+  - EVENT LOOP, ASYNC PATTERNS, EVENTS EMITTER AND STREAMS
+  - MAIN CONCEPTS
+  - PRE-BUILT CODE
+
 * VSCode Commands:
   - CTRL + ` - Open terminal
   - CTRL + C - Stop the app from running
