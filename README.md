@@ -88,3 +88,7 @@ console.log(`Hey it's my first node app!!!`);
 ```bash
 $ node app.js
 ```
+
+## Source Code
+* [Website](https://johnsmilga.com/)
+* [Repository](https://github.com/john-smilga/node-express-course)
