@@ -1,16 +1,16 @@
-const os = require('os');
+const path = require('path');
 
-// Info about current user
-const user = os.userInfo();
-// console.log(user);
+// Separator
+console.log(path.sep);
 
-// Method returns the system uptime in seconds
-console.log(`The System Uptime is ${os.uptime()} seconds`);
+// Join all give path segments
+const filePath = path.join('/content', 'subfolder', 'test.txt');
+console.log(filePath);
 
-const currentOS = {
-  name: os.type(),
-  release: os.release(),
-  totalMen: os.totalmem(),
-  freeMen: os.freemem(),
-};
-console.log(currentOS);
+// Return the last portion of a path
+const base = path.basename(filePath);
+console.log(base);
+
+// Resolve a sequence of paths or path segments into an absolute path
+const absolute = path.resolve(__dirname, 'content', 'subfolder', 'test.txt');
+console.log(absolute);
