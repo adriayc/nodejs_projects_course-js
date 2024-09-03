@@ -69,3 +69,22 @@ undefined
 > CTRL + C
 (To exit, press CTRL + C again or CTRL + D or type .exit)
 ```
+
+## CLI
+* Create 'tutorial' directory and inside the directory a file 'app.js'
+```js
+const amount = 12;
+
+if (amount < 12) {
+  console.log('Small number');
+} else {
+  console.log('Large number');
+}
+
+console.log(`Hey it's my first node app!!!`);
+```
+
+* Run the file with node.js CLI
+```bash
+$ node app.js
+```
