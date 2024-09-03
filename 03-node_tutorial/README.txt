@@ -70,6 +70,10 @@
     > https://www.course-api.com/images/slides/slide-2.png
     > https://www.course-api.com/images/slides/slide-3.png
 
+* EVENTS
+  - Event-Driven Programming
+  - Used Heavily in Node.js
+
 * VSCode Commands:
   - CTRL + ` - Open terminal
   - CTRL + C - Stop the app from running
