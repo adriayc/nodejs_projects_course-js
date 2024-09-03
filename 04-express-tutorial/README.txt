@@ -10,3 +10,6 @@
     + POST: Insert Data
     + PUT: Update Data
     + DELETE: Delete Data
+
+* Starter Project Info (REPO: https://github.com/john-smilga/node-express-course)
+  In order to follow along with the course, you will need to get a starter project.
