@@ -27,8 +27,12 @@
       $ npm i lodash
     + Bootstrap
       $ npm i bootstrap
+    + Nodemon (Tools that helps develop Node.js based applications)
+      $ npm i nodemon --save-dev
+      $ npm i nodemon -D
   - Run app
     $ node <fileName>.js
+    $ npm start
 
 * Share Code on GitHub
   - Create the repository on GitHub
