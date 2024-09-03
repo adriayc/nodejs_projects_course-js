@@ -92,3 +92,6 @@ $ node app.js
 ## Source Code
 * [Website](https://johnsmilga.com/)
 * [Repository](https://github.com/john-smilga/node-express-course)
+
+## NPM
+[npm](https://www.npmjs.com/) (short for Node Package Manager) is a package manager for JavaScript. It is used primarily with Node.js, a JavaScript runtime that allows you to run JavaScript on the sever side. npm helps developers manage dependencies and packages for their Node.js projects.
