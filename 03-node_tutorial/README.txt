@@ -30,6 +30,9 @@
     + Nodemon (Tools that helps develop Node.js based applications)
       $ npm i nodemon --save-dev
       $ npm i nodemon -D
+  - Uninstall dependencies (E.G. - npm uninstall packageName)
+    $ npm uninstall bootstrap
+    NOTE: Another way - remove the dependency or dependencies on package-json, node_modules, package-lock.json and 'npm install'
   - Run app
     $ node <fileName>.js
     $ npm start
@@ -53,3 +56,4 @@
 
 * VSCode Commands:
   - CTRL + ` - Open terminal
+  - CTRL + C - Stop the app from running
