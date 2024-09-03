@@ -74,6 +74,12 @@
   - Event-Driven Programming
   - Used Heavily in Node.js
 
+* STREAMS
+  - Writeable
+  - Readable
+  - Duplex
+  - Transform
+
 * VSCode Commands:
   - CTRL + ` - Open terminal
   - CTRL + C - Stop the app from running
