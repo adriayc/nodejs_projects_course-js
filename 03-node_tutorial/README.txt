@@ -63,6 +63,9 @@
   - MAIN CONCEPTS
   - PRE-BUILT CODE
 
+* Event Loop
+  The event loop is what allows Node.js to perform no-blocking I/O operations - despite the fact that a single JavaScript thread is used by default - by offloading operations to the system kernel whenever possible.
+
 * VSCode Commands:
   - CTRL + ` - Open terminal
   - CTRL + C - Stop the app from running
