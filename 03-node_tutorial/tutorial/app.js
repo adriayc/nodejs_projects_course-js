@@ -1,16 +1,16 @@
-// CommonJS, every ile is module (by default)
-// Modules - Encapsulated Code (only share minimum)
-const names = require('./04-names');
-// const { adrian, peter } = require('./04-names');
-const sayHi = require('./05-utils');
-const data = require('./06-alternative-flavor');
-// Self invoke
-require('./07-mind-grenade');
-// console.log(names);
-// console.log(data);
+const os = require('os');
 
-// sayHi('susan');
-// sayHi(adrian);
-// sayHi(names.adrian);
-// sayHi(peter);
-// sayHi(names.peter);
+// Info about current user
+const user = os.userInfo();
+// console.log(user);
+
+// Method returns the system uptime in seconds
+console.log(`The System Uptime is ${os.uptime()} seconds`);
+
+const currentOS = {
+  name: os.type(),
+  release: os.release(),
+  totalMen: os.totalmem(),
+  freeMen: os.freemem(),
+};
+console.log(currentOS);
