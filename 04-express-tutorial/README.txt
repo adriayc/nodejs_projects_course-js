@@ -36,3 +36,5 @@
   - Run app
     $ node <fileName>.js
     $ npm start
+
+* Starter Overview (Project directory)
