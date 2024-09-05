@@ -1,4 +1,8 @@
 const http = require('http');
+const { readFileSync } = require('fs');
+
+// Get all files
+const homePage = readFileSync('./index.html');
 
 // Create server
 const server = http.createServer((req, res) => {
@@ -12,9 +16,11 @@ const server = http.createServer((req, res) => {
   if (url === '/') {
     // Headers
     res.writeHead(200, { 'content-type': 'text/html' }); // 200 OK
+    // res.writeHead(200, { 'content-type': 'text/plain' }); // 200 OK
     // res.writeHead(404, { 'content-type': 'text/html' }); // 404 Not Found
 
-    res.write('<h1>Home page</h1>');
+    // res.write('<h1>Home page</h1>');
+    res.write(homePage);
     res.end();
   }
   // About page
