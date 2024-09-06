@@ -95,3 +95,10 @@ $ node app.js
 
 ## NPM
 [npm](https://www.npmjs.com/) (short for Node Package Manager) is a package manager for JavaScript. It is used primarily with Node.js, a JavaScript runtime that allows you to run JavaScript on the sever side. npm helps developers manage dependencies and packages for their Node.js projects.
+
+## Express
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile application.
+
+```sh
+$ npm install express --save
+```

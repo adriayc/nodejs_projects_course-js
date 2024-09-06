@@ -29,8 +29,9 @@
       Is this OK? (yes) ENTER
     > $ npm init -y
   - Install dependencies
-    + Express
-      $ npm install express --save
+    + Express (Express Info)
+      $ npm install express@ --save
+      $ npm install express@4.19.2 --save   // Install a specific version
     + Nodemon
       $ npm install --save-dev nodemon
   - Run app
