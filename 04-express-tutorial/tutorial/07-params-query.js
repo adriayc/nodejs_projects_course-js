@@ -36,6 +36,13 @@ app.get('/api/products/:productId', (req, res) => {
   return res.json(singleProduct);
 });
 
+// URL: http://localhost:5000/api/products/1/reviews/2
+app.get('/api/products/:productId/reviews/:reviewId', (req, res) => {
+  console.log(req.params);
+
+  res.send('Hello world');
+});
+
 app.listen(5000, () => {
   console.log('Server is running on port 5000...');
 });
