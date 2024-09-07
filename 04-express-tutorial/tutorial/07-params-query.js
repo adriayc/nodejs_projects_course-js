@@ -19,6 +19,23 @@ app.get('/api/products', (req, res) => {
   res.json(newProducts);
 });
 
+// URL: http://localhost:5000/api/products/1
+app.get('/api/products/:productId', (req, res) => {
+  // console.log(req);
+  // console.log(req.params);
+  const { productId } = req.params;
+
+  const singleProduct = products.find(
+    (product) => product.id === Number(productId)
+  );
+
+  if (!singleProduct) {
+    return res.status(404).send('Product does not exists');
+  }
+
+  return res.json(singleProduct);
+});
+
 app.listen(5000, () => {
   console.log('Server is running on port 5000...');
 });
