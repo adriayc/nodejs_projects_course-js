@@ -1,14 +1,17 @@
 const express = require('express');
 // Middlewares
 const logger = require('./logger');
+const authorize = require('./authorize');
 
 const app = express();
 
 // req => middleware => res
 
 // USE
-app.use(logger); // Use middleware for all endpoints
+// app.use(logger); // Use middleware for all endpoints
 // app.use('/api', logger); // use middleware for all endpoints stating with '/api'
+app.use([logger, authorize]); // Use multiple middleware
+// app.use([authorize, logger]); // Use multiple middleware (Changing the order of middleware)
 
 // Call middleware
 app.get('/', (req, res) => {
@@ -26,6 +29,7 @@ app.get('/api/products', (req, res) => {
 });
 
 app.get('/api/items', (req, res) => {
+  console.log(req.user);
   res.send('Items');
 });
 
