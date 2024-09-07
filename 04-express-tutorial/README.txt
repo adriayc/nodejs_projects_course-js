@@ -55,3 +55,5 @@
 * METHODS
   - GET: Read Data
     > GET     www.store.com/api/orders      get all orders
+  - POST: Insert Data
+    > POST    www.store.com/api/orders      place an order (send data)
