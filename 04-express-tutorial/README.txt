@@ -51,3 +51,7 @@
     + SSR - TEMPLATE
     + SEND TEMPLATE
     + RES.RENDER()
+
+* METHODS
+  - GET: Read Data
+    > GET     www.store.com/api/orders      get all orders
