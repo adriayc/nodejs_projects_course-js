@@ -39,3 +39,13 @@
     $ npm start
 
 * Starter Overview (Project directory)
+
+* API vs SSR
+  - API
+    + API - JSON
+    + SEND DATA
+    + RES.JSON
+  - SSR
+    + SSR - TEMPLATE
+    + SEND TEMPLATE
+    + RES.RENDER()
