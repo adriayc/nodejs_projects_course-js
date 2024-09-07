@@ -34,6 +34,8 @@
       $ npm install express@4.19.2 --save   // Install a specific version
     + Nodemon
       $ npm install --save-dev nodemon
+    + Morgan (HTTP request logger middleware for Node.js)
+      $ npm i morgan
   - Run app
     $ node <fileName>.js
     $ npm start
