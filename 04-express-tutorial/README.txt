@@ -57,6 +57,8 @@
     > GET     www.store.com/api/orders      get all orders
   - POST: Insert Data
     > POST    www.store.com/api/orders      place an order (send data)
+  - PUT: Update Data
+    > PUT     www.store.com/api/orders/:id  update specific order (params + send data)
 
 * Install Postman (URL: https://www.postman.com/)
   - Create Workspaces (E.G: Node.js & Express.js)
@@ -65,6 +67,12 @@
         > GET: localhost:5000/api/people
           Click 'Send'
         > POST: localhost:5000/api/postman/people
+          > Body -> raw -> JSON
+            {
+              "name": "adrian"
+            }
+          Click 'Send'
+        > PUT: localhost:5000/api/postman/people/1
           > Body -> raw -> JSON
             {
               "name": "adrian"
