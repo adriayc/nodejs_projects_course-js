@@ -78,3 +78,5 @@
               "name": "adrian"
             }
           Click 'Send'
+        > DELETE: localhost:5000/api/postman/people/1
+          Click 'Send'
