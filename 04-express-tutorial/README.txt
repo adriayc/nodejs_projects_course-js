@@ -57,3 +57,16 @@
     > GET     www.store.com/api/orders      get all orders
   - POST: Insert Data
     > POST    www.store.com/api/orders      place an order (send data)
+
+* Install Postman (URL: https://www.postman.com/)
+  - Create Workspaces (E.G: Node.js & Express.js)
+    + Create Collection (E.G: Express Tutorial)
+      - Add a request
+        > GET: localhost:5000/api/people
+          Click 'Send'
+        > POST: localhost:5000/api/postman/people
+          > Body -> raw -> JSON
+            {
+              "name": "adrian"
+            }
+          Click 'Send'
