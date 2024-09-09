@@ -19,3 +19,9 @@ PROJECT INTRO AND SETUP
       $ npm install --save-dev nodemon
     + Express
       $ npm install express --save
+  - Run app
+    $ cd my-node-app
+    $ code .  // Open VSCode
+    $ npm install  // Install all dependencies (Optional)
+    $ node <fileName>.js  // Run a file (Optional)
+    $ npm start  // Run app
