@@ -25,3 +25,8 @@ TASK MANAGER API
     $ npm install  // Install all dependencies (Optional)
     $ node <fileName>.js  // Run a file (Optional)
     $ npm start  // Run app
+
+* Routes Structure and Details
+  - E.G. Algolia Search's API (URL: https://hn.algolia.com/api)
+    > Items
+      GET   http://hn.algolia.com/api/v1/items/:id
