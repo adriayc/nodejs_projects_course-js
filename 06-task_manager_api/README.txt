@@ -74,3 +74,10 @@ TASK MANAGER API
   - STORE JSON
   - EASY TO GET STARTED
   - FREE CLOUD HOSTING - ATLAS
+
+* MongoDB Atlas Database
+  - Create an Atlas account
+  - Deploy a free cluster
+    > M0 (Free)
+    > Name: TaskManagerCluster
+    Click 'Create Deployment'
