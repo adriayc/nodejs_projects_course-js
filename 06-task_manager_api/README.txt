@@ -61,3 +61,10 @@ TASK MANAGER API
       - DELETE
         > DELETE: {{URL}}/tasks/peter
         Click 'Send'
+
+* REST API
+  + GET             api/tasks               - Get All Tasks
+  + POST            api/tasks               - Create Task
+  + GET             api/tasks/:id           - Get Task
+  + PUT/PATCH       api/tasks/:id           - Update Task
+  + DELETE          api/tasks/:id           - Delete Task
