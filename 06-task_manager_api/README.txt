@@ -68,3 +68,9 @@ TASK MANAGER API
   + GET             api/tasks/:id           - Get Task
   + PUT/PATCH       api/tasks/:id           - Update Task
   + DELETE          api/tasks/:id           - Delete Task
+
+* MongoDB
+  - NoSQL, NON RELATIONAL DB
+  - STORE JSON
+  - EASY TO GET STARTED
+  - FREE CLOUD HOSTING - ATLAS
