@@ -81,3 +81,13 @@ TASK MANAGER API
     > M0 (Free)
     > Name: TaskManagerCluster
     Click 'Create Deployment'
+
+* MongoDB Access and Connection String
+  - Get User/Password (SECURITY | Database Access)
+  - Add IP Address (SECURITY | Network Access -> Click '+ Add IP Address')
+    > Access List Entry: 0.0.0.0/0
+    > Comment: EMPTY
+    Click 'Confirm'
+  - Connection String (DEPLOYMENT | Database -> Click 'Connect' -> Drivers -> Copy Connection String)
+    > mongodb+srv://<DB_USER>:<DB_PASSWORD>@taskmanagercluster.c64pr.mongodb.net/?retryWrites=true&w=majority&appName=TaskManagerCluster
+    Click 'Done'
