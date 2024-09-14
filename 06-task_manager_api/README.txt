@@ -129,3 +129,20 @@ TASK MANAGER API
       Click 'Update'
     + Delete Document (Click 'Remove Document')
       Click 'Delete'
+
+* Schema Info
+  - Schema
+    const TaskSchema = new mongoose.Schema({
+      name: String,
+      completed: Boolean,
+    });
+  - POST (Postman)
+    > POST: http://localhost:3000/api/vi/tasks
+    Body -> raw | JSON
+    {
+      "name": "third task",
+      "completed": true,
+      "random": "random",
+      "amount": 5
+    }
+  NOTE: Only the properties defined in the schema will be taken for the creation of the task.
