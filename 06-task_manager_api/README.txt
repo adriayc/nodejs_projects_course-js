@@ -91,3 +91,7 @@ TASK MANAGER API
   - Connection String (DEPLOYMENT | Database -> Click 'Connect' -> Drivers -> Copy Connection String)
     > mongodb+srv://<DB_USER>:<DB_PASSWORD>@taskmanagercluster.c64pr.mongodb.net/?retryWrites=true&w=majority&appName=TaskManagerCluster
     Click 'Done'
+  - Add IP Address for Production (SECURITY | Network Access -> Click '+ Add IP Address')
+    > Access List Entry: {{IP_ADDRESS}}
+    > Comment: {{COMMENT}}
+    Click 'Confirm'
