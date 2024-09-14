@@ -1,3 +1,5 @@
+// Connect MongoDB
+require('./db/connect');
 const express = require('express');
 // Routers
 const routes = require('./routes/tasks');
