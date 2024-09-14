@@ -3,6 +3,8 @@ const express = require('express');
 const routes = require('./routes/tasks');
 // Connect MongoDB
 const connectDB = require('./db/connect');
+// DotEnv
+require('dotenv').config();
 
 const app = express();
 
@@ -27,7 +29,7 @@ const port = 3000;
 const start = async () => {
   try {
     // Connect DB
-    await connectDB();
+    await connectDB(process.env.MONGO_URI);
     // Listen port
     app.listen(port, console.log(`Server is listening on port ${port}...`));
   } catch (error) {

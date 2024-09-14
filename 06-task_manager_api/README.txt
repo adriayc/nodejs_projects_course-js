@@ -21,6 +21,8 @@ TASK MANAGER API
       $ npm install express --save
     + Mongoose
       $ npm install mongoose --save
+    + DotEnv
+      $ npm i dotenv
   - Run app
     $ cd task-manager
     $ code .  // Open VSCode
