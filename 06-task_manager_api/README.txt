@@ -19,6 +19,8 @@ TASK MANAGER API
       $ npm install --save-dev nodemon
     + Express
       $ npm install express --save
+    + Mongoose
+      $ npm install mongoose --save
   - Run app
     $ cd task-manager
     $ code .  // Open VSCode
