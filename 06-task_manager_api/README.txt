@@ -112,3 +112,16 @@ TASK MANAGER API
       > _id: ObjectId('xxxxx')          ObjectId
       > name: "first product"           String
       Click 'Insert'
+
+* CRUD (GUI Example)
+  - Go to 'Products' collection (DEPLOYMENT | Database -> Click 'Browser Collections' -> Click 'Collection | Products')
+    + Create New Document (Click 'Insert Document')
+      > _id: XXXX             ObjectId
+      > name: "test"          String
+      Click 'Insert'
+    + Update Document (Click 'Edit Document')
+      > _id: ObjectId('xxxxx')
+      > name: "test 2"
+      Click 'Update'
+    + Delete Document (Click 'Remove Document')
+      Click 'Delete'
