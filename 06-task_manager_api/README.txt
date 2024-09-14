@@ -95,3 +95,20 @@ TASK MANAGER API
     > Access List Entry: {{IP_ADDRESS}}
     > Comment: {{COMMENT}}
     Click 'Confirm'
+
+* MongoDB Overview
+  - Create Database and Collection (DEPLOYMENT | Database -> Click 'Browser Collections' -> Click '+ Create Database')
+    > Database name: Store
+    > Collection name: Products
+    > Additional Preferences: {{DEFAULT}}
+    Click 'Create '
+  - Create Collection or Insert Document
+    + Create Collection (Click 'Database name | Store' -> Click 'Create Collection')
+      > Database name: Store (Default)
+      > Collection name: users
+      > Additional Preferences: {{DEFAULT}}
+      Click 'Create'
+    + Insert Document (Click 'Collection name | Products' -> Click 'Insert Document')
+      > _id: ObjectId('xxxxx')          ObjectId
+      > name: "first product"           String
+      Click 'Insert'
