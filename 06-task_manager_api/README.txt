@@ -171,3 +171,9 @@ TASK MANAGER API
   > GET: http://localhost:3000/
     404 Not Found
     Route does not exist
+
+* PORT Variable
+  > app.js
+    const port = process.env.PORT || 3000;
+  > Run:
+    $ PORT=6000 node app.js
