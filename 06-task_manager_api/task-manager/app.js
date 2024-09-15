@@ -8,13 +8,11 @@ require('dotenv').config();
 
 const app = express();
 
+// Static (Front-End)
+app.use(express.static('./public'));
+
 // Middleware
 app.use(express.json());
-
-// Routes
-app.get('/hello', (req, res) => {
-  res.send('Task Manager App');
-});
 
 // app.get('/api/v1/tasks');            - get all the tasks
 // app.post('/api/v1/tasks');           - create a new task
@@ -22,6 +20,7 @@ app.get('/hello', (req, res) => {
 // app.patch('/api/v1/tasks/:id');      - update task
 // app.delete('/api/v1/tasks/:id');     - delete task
 
+// Routes
 app.use('/api/v1/tasks', routes);
 
 const port = 3000;
