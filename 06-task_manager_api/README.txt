@@ -162,3 +162,7 @@ TASK MANAGER API
           "message": "Cast to ObjectId failed for value \"{{ID}}\" (type string) at path \"_id\" for model \"Task\""
       }
     }
+
+* PUT vs PATCH
+  - PUT: The PUT method is used to update o replace an entire resource.
+  - PATCH: The PATCH method is used to apply partila updates to a resource.
