@@ -146,3 +146,19 @@ TASK MANAGER API
       "amount": 5
     }
   NOTE: Only the properties defined in the schema will be taken for the creation of the task.
+
+* Two ypes of Erros
+  > GET: http://localhost:3000/api/vi/tasks/66e6023dc1b2ba91c961559f replace 'f' with '0'
+    404 Not Found
+    {
+      "msg": "No task with id: 66e6023dc1b2ba91c9615591"
+    }
+  > GET: http://localhost:3000/api/vi/tasks/66e6023dc1b2ba91c961559f add 'g' or remove 'f'
+    500 Internal Server Error
+    {
+      "msg": {
+          ...
+          "name": "CastError",
+          "message": "Cast to ObjectId failed for value \"{{ID}}\" (type string) at path \"_id\" for model \"Task\""
+      }
+    }
