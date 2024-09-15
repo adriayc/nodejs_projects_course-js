@@ -166,3 +166,8 @@ TASK MANAGER API
 * PUT vs PATCH
   - PUT: The PUT method is used to update o replace an entire resource.
   - PATCH: The PATCH method is used to apply partila updates to a resource.
+
+* Not Found (Postman)
+  > GET: http://localhost:3000/
+    404 Not Found
+    Route does not exist
