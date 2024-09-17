@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('express-async-errors');
 const express = require('express');
 // Connect DB (MongoDB)
 const connectedDB = require('./db/connect');

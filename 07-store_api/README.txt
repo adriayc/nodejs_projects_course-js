@@ -23,6 +23,8 @@ STORE API
       $ npm i dotenv
     + Mongoose
       $ npm install mongoose --save
+    + ExpressJS Async Errors
+      $ npm i express-async-errors
   - Run app
     $ cd store-api
     $ code .              // Open VSCode
