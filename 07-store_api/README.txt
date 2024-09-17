@@ -21,9 +21,16 @@ STORE API
       $ npm install express --save
     + DotEnv
       $ npm i dotenv
+    + Mongoose
+      $ npm install mongoose --save
   - Run app
     $ cd store-api
     $ code .              // Open VSCode
     $ npm install         // Install all dependencies (Optional)
     $ node <fileName>.js  // Run a file (Optional)
     $ npm start           // Run app
+
+* Connection String
+  - Connection String (DEPLOYMENT | Database -> Click 'Connect' -> Drivers -> Copy Connection String)
+    > mongodb+srv://<DB_USER>:<DB_PASSWORD>@nodeexpresscluster.c64pr.mongodb.net/?retryWrites=true&w=majority&appName=NodeExpressCluster
+    Click 'Done'
