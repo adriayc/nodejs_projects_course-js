@@ -34,3 +34,17 @@ STORE API
   - Connection String (DEPLOYMENT | Database -> Click 'Connect' -> Drivers -> Copy Connection String)
     > mongodb+srv://<DB_USER>:<DB_PASSWORD>@nodeexpresscluster.c64pr.mongodb.net/?retryWrites=true&w=majority&appName=NodeExpressCluster
     Click 'Done'
+
+* Postman
+  - Create 'Blank collection'
+    Name: Store API
+    + Create 'variables Globals' (Click Environment quick look -> Globals | Edit)
+      > Variable: URL     Initial value: localhost:3000/api/v1    Current value: localhost:3000/api/v1
+    + Add a request
+      - GET
+        > GET: localhost:3000/api/v1/products
+        > GET: {{URL}}/products
+        Click 'Send'
+      - GET
+        > GET: {{URL}}/products/static
+        Click 'Send'
