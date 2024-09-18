@@ -50,3 +50,7 @@ STORE API
       - GET
         > GET: {{URL}}/products/static
         Click 'Send'
+
+* Populate DB
+  - Run file
+    $ node populate.js
