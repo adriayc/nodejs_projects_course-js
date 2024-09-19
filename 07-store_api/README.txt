@@ -54,3 +54,6 @@ STORE API
 * Populate DB
   - Run file
     $ node populate.js
+
+* Query params
+  - E.G. Algolia Search's API (URL: https://hn.algolia.com/api)
