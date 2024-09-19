@@ -8,9 +8,9 @@ const getAllProductsStatic = async (req, res) => {
   res.status(200).json({ products, nbHits: products.length });
 };
 
-// URL: http://localhost:3000/api/v1/products?limit=5&page=1
+// URL: http://localhost:3000/api/v1/products?numericFilters=price>40,rating>=4
 const getAllProducts = async (req, res) => {
-  const { featured, company, name, sort, fields } = req.query;
+  const { featured, company, name, sort, fields, numericFilters } = req.query;
   const queryObject = {};
 
   if (featured) {
@@ -23,6 +23,23 @@ const getAllProducts = async (req, res) => {
     queryObject.name = { $regex: name, $options: 'i' };
   }
   // console.log(queryObject);
+
+  if (numericFilters) {
+    // console.log(numericFilters);
+    const operatorMap = {
+      '>': '$gt',
+      '>=': '$gte',
+      '=': '$eq',
+      '<': '$lt',
+      '<=': '$lte',
+    };
+    const regEx = /\b(<|>|>=|=|<|<=)\b/g;
+    let filters = numericFilters.replace(
+      regEx,
+      (match) => `-${operatorMap[match]}-`
+    );
+    console.log(filters);
+  }
 
   let result = Product.find(queryObject);
   // Sort
