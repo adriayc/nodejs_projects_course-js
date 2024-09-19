@@ -1,15 +1,13 @@
 const Product = require('../models/product');
 
-// URL: http://localhost:3000/api/v1/products/static?sort=-name,price
+// URL: http://localhost:3000/api/v1/products/static?fields=name,price
 const getAllProductsStatic = async (req, res) => {
-  // Sort Order
-  // const products = await Product.find({}).sort('name'); // Asc
-  const products = await Product.find({}).sort('-name price'); // Desc
+  const products = await Product.find({}).select('name price');
   res.status(200).json({ products, nbHits: products.length });
 };
 
 const getAllProducts = async (req, res) => {
-  const { featured, company, name, sort } = req.query;
+  const { featured, company, name, sort, fields } = req.query;
   const queryObject = {};
 
   if (featured) {
@@ -31,6 +29,12 @@ const getAllProducts = async (req, res) => {
     result = result.sort(sortList);
   } else {
     result = result.sort('createAt');
+  }
+
+  // Select
+  if (fields) {
+    filedList = fields.split(',').join(' ');
+    result = result.select(filedList);
   }
   const products = await result;
   res.status(200).json({ products, nbHits: products.length });
