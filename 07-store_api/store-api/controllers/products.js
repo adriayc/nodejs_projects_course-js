@@ -1,12 +1,10 @@
 const Product = require('../models/product');
 
-// URL: http://localhost:3000/api/v1/products/static?sort=name&fields=name,price
+// URL: http://localhost:3000/api/v1/products/static?numericFilters=price>20&sort=price
 const getAllProductsStatic = async (req, res) => {
-  const products = await Product.find({})
-    .sort('name')
-    .select('name price')
-    .limit(10) // limit - Specifies the maximum number of docs the query will return
-    .skip(5); // skip - Specifies the number of docs to skip
+  const products = await Product.find({ price: { $gt: 30 } })
+    .sort('price')
+    .select('name price');
   res.status(200).json({ products, nbHits: products.length });
 };
 
