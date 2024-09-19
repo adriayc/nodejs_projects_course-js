@@ -1,11 +1,10 @@
 const Product = require('../models/product');
 
+// URL: http://localhost:3000/api/v1/products/static?sort=-name,price
 const getAllProductsStatic = async (req, res) => {
-  const search = 'ab';
-  const products = await Product.find({
-    // name: 'albany ',
-    name: { $regex: search, $options: 'i' },
-  });
+  // Sort Order
+  // const products = await Product.find({}).sort('name'); // Asc
+  const products = await Product.find({}).sort('-name price'); // Desc
   res.status(200).json({ products, nbHits: products.length });
 };
 
