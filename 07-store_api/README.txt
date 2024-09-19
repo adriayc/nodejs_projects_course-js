@@ -57,3 +57,6 @@ STORE API
 
 * Query params
   - E.G. Algolia Search's API (URL: https://hn.algolia.com/api)
+
+* Mongoose V6 Update
+  - Migrating from 5.x to 6.x (URL: URL: https://mongoosejs.com/docs/migrating_to_6.html)
