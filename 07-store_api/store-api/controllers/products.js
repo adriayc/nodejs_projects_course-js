@@ -1,7 +1,6 @@
 const Product = require('../models/product');
 
 const getAllProductsStatic = async (req, res) => {
-  // throw new Error('Testing async errors');
   const products = await Product.find({
     // featured: true,
     name: 'vase table',
