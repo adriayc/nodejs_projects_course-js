@@ -29,3 +29,22 @@ JWT BASICS (LOGIN/REGISTER)
     $ npm install         // Install all dependencies (Optional)
     $ node <fileName>.js  // Run a file (Optional)
     $ npm start
+
+* Postman
+  - Create 'Blank collection'
+    Name: Comfy Store
+    + Create 'variables Globals' (Click Environment quick look -> Globals | Edit)
+      > Variable: URL     Initial value: localhost:3000/api/v1    Current value: localhost:3000/api/v1
+    + Add a request
+      - GET
+        > GET: localhost:3000/api/v1/dashboard
+        > GET: {{URL}}/products
+        Click 'Send'
+      - POST
+        > GET: {{URL}}/login
+          Body -> raw -> JSON
+          {
+            "username": "john"
+            "password": "secret"
+          }
+        Click 'Send'
