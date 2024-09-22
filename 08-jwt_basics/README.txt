@@ -48,3 +48,5 @@ JWT BASICS (LOGIN/REGISTER)
             "password": "secret"
           }
         Click 'Send'
+
+* JWT - Overview (URL: https://www.course-api.com/images/slides/slide-7.png)

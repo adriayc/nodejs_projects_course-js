@@ -108,3 +108,6 @@ MongoDB is a popular NoSQL database designed for handling large amounts of unstr
 
 ## Mongoose
 [Mongoose](https://mongoosejs.com/) is a popular Object Data Modelin (ODM) library for MongoDB and Node.js. Mongoose provides a straightforward way to model your data, manage schema definitions, and interact with MongoDB.
+
+## JSON Web Token
+A[JSON Web Token (JWT)](https://jwt.io/) is a compact, URL-safe means of representing claims to be brasferred between two parties. It allows you tu verify teh token's authenticity and the identity of the user or service.
