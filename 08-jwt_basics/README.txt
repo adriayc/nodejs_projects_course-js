@@ -50,3 +50,14 @@ JWT BASICS (LOGIN/REGISTER)
         Click 'Send'
 
 * JWT - Overview (URL: https://www.course-api.com/images/slides/slide-7.png)
+
+* JWT - Structure
+  In its compact form, JSON Web Topkens consist of three parts separeted by dos (.), which are:
+    - Header
+      The header typcally consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, sucha as HMAC SHA256 or RSA
+    - Payload
+      The second part of teh token is the payload, which contains the claims. There are theree types of claims: registered, public, and privete claims.
+    - Signature
+      To create teh signature part you have to take teh encoded header the encoded payload, a secret, algorithm specified in teh header, and sign that.
+  Therefore , as JWT typically looks like the following.
+    xxxxx.yyyyy.zzzzz
