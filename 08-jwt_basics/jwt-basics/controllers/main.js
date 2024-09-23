@@ -32,7 +32,15 @@ const login = async (req, res) => {
 
 const dashboard = async (req, res) => {
   // Headers
-  console.log(req.headers);
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    throw new CustomAPIError('No token provided', 401);
+  }
+
+  // Token
+  const token = authHeader.split(' ')[1];
+  console.log(token);
 
   const luckyNumber = Math.floor(Math.random() * 100);
   res.status(200).json({
