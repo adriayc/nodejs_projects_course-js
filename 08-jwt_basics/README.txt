@@ -71,3 +71,11 @@ JWT BASICS (LOGIN/REGISTER)
   ```
   Authorization: Bearer <totken>
   ```
+
+* Send Bearer Token (Postman)
+  - GET
+    > GET: {{URL}}/products
+      Headers
+        Key:                    Value:
+        Authorization           Bearer {{TOKEN}}
+    Click 'Send'
