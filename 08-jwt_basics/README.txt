@@ -23,6 +23,8 @@ JWT BASICS (LOGIN/REGISTER)
       $ npm i dotenv
     + ExpressJS Async Errors
       $ npm i express-async-errors
+    + JSON Web Token
+      $ npm i jsonwebtoken
   - Run app
     $ cd store-api
     $ code .              // Open VSCode
