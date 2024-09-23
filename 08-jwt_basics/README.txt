@@ -63,3 +63,11 @@ JWT BASICS (LOGIN/REGISTER)
       To create teh signature part you have to take teh encoded header the encoded payload, a secret, algorithm specified in teh header, and sign that.
   Therefore , as JWT typically looks like the following.
     xxxxx.yyyyy.zzzzz
+
+* Bearer Token - Overview
+  In authentication, when the user successfully logs in using their credential , a JSON Web Token will be returned. Since tokens are credentials, grat care must be takes to prevent security issues.
+
+  Whenever the user wants to access a protected route or resource, the user aget should send the JWT, typically in teh "Authorization" header using the "Bearer" schema, The content of the header should look like the following:
+  ```
+  Authorization: Bearer <totken>
+  ```
