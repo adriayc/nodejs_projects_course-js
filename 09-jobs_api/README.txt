@@ -27,6 +27,8 @@ JOBS API
       $ npm i http-status-codes
     + Mongoose
       $ npm install mongoose --save
+    + Bcrypt.js
+      $ npm i bcryptjs
   - Run app
     $ cd jobs-api
     $ code .              // Open VSCode
