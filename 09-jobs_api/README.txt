@@ -29,6 +29,8 @@ JOBS API
       $ npm install mongoose --save
     + Bcrypt.js
       $ npm i bcryptjs
+    + JSON Web Token
+      $ npm i jsonwebtoken
   - Run app
     $ cd jobs-api
     $ code .              // Open VSCode
