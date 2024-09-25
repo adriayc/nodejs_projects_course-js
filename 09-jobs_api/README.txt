@@ -25,9 +25,16 @@ JOBS API
       $ npm i express-async-errors
     + Http Status Codes
       $ npm i http-status-codes
+    + Mongoose
+      $ npm install mongoose --save
   - Run app
     $ cd jobs-api
     $ code .              // Open VSCode
     $ npm install         // Install all dependencies (Optional)
     $ node <fileName>.js  // Run a file (Optional)
     $ npm start
+
+* Connection String
+  - Connection String (DEPLOYMENT | Database -> Click 'Connect' -> Drivers -> Copy Connection String)
+    > mongodb+srv://{{DB_USER}}:{{DB_PASSWORD}}@nodeexpresscluster.c64pr.mongodb.net/?retryWrites=true&w=majority&appName={{APP_NAME}}
+    Click 'Done'
