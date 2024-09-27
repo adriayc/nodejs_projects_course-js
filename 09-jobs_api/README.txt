@@ -31,6 +31,15 @@ JOBS API
       $ npm i bcryptjs
     + JSON Web Token
       $ npm i jsonwebtoken
+    Extra security packages
+    + Helmet
+      $ npm i helmet
+    + Cors
+      $ npm i cors
+    + Express XSS Sanitizer
+      $ npm i express-xss-sanitizer
+    + Express Rate Limit
+      $ npm i express-rate-limit
   - Run app
     $ cd jobs-api
     $ code .              // Open VSCode

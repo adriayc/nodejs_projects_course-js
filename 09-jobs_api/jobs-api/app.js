@@ -1,6 +1,11 @@
 const express = require('express');
 require('dotenv').config();
 require('express-async-errors');
+// Extra security packages
+const helmet = require('helmet');
+const cors = require('cors');
+const { xss } = require('express-xss-sanitizer');
+const { rateLimit } = require('express-rate-limit');
 // Connect DB
 const connectDB = require('./db/connect');
 // Middlewares
@@ -13,8 +18,22 @@ const jobsRouter = require('./routes/jobs');
 
 const app = express();
 
+// Extra security
+app.set('trust proxy', 1);
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+    // standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+    // legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+  })
+);
 // Middlewares
 app.use(express.json());
+// Extra security
+app.use(helmet());
+app.use(cors());
+app.use(xss());
 
 // Routes
 app.use('/api/v1/auth', authRouter);
