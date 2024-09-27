@@ -4,7 +4,11 @@ const Job = require('../models/Job');
 // Errors
 
 const getAllJobs = async (req, res) => {
-  const jobs = await Job.find({ createdBy: req.user.userId }).sort('createdAt');
+  console.log(req.user.userId);
+
+  // const jobs = await Job.find({ createdBy: req.user.userId }).sort('createdAt');
+  const jobs = await Job.find({ createdBy: req.user.userId });
+  // console.log(jobs);
   res.status(StatusCodes.OK).json({ jobs, count: jobs.length });
 };
 const getJob = async (req, res) => {

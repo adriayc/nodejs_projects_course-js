@@ -42,3 +42,27 @@ JOBS API
   - Connection String (DEPLOYMENT | Database -> Click 'Connect' -> Drivers -> Copy Connection String)
     > mongodb+srv://{{DB_USER}}:{{DB_PASSWORD}}@nodeexpresscluster.c64pr.mongodb.net/?retryWrites=true&w=majority&appName={{APP_NAME}}
     Click 'Done'
+
+* Set Token Dynamically in Postman
+  - POST
+    > POST: {{URL}}/auth/login
+      > Body -> raw -> JSON
+      {
+        "username": "adriano@email.com"
+        "password": "adriano123"
+      }
+      > Scripts -> Post-response
+      ```
+      const jsonData = pm.response.json();
+      pm.globals.set("accessToken", jsonData.token);
+      ```
+      NOTE: Add the configuration to the endpoints that are necessary
+    Click 'Send'
+  - View Globals (Click 'Variables' -> View Variables used | Globals)
+  - Disable Authorization (EndPoint -> Headers)
+    X Authorization   Bearer xxx
+  - GET
+    > GET: {{URL}}/jobs
+      > Authorization
+        Type: Bearer Token        Token: {{accessToken}
+    Click 'Send'
