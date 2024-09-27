@@ -5,8 +5,6 @@ const Job = require('../models/Job');
 const { NotFoundError, BadRequestError } = require('../errors');
 
 const getAllJobs = async (req, res) => {
-  console.log(req.user.userId);
-
   // const jobs = await Job.find({ createdBy: req.user.userId }).sort('createdAt');
   const jobs = await Job.find({ createdBy: req.user.userId });
   // console.log(jobs);

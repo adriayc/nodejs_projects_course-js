@@ -11,7 +11,6 @@ const errorHandlerMiddleware = (err, req, res, next) => {
   //   return res.status(err.statusCode).json({ msg: err.message });
   // }
   if (err.name === 'ValidationError') {
-    // console.log(Object.values(err.errors));
     customError.statusCode = 400;
     customError.msg = Object.values(err.errors)
       .map((item) => item.message)
@@ -22,6 +21,10 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     customError.msg = `Duplicate value entered for ${Object.keys(
       err.keyValue
     )} field, please choose another value`;
+  }
+  if (err.name === 'CastError') {
+    customError.statusCode = 404;
+    customError.msg = `No item found with id: ${err.value}`;
   }
   // return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ err });
   return res.status(customError.statusCode).json({ msg: customError.msg });
