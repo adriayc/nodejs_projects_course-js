@@ -48,7 +48,7 @@ Email Validation Regex
 - Duplicate (Email)
 - Cast Error
 
-#### Security
+#### Security (Info)
 
 - helmet
 - cors
