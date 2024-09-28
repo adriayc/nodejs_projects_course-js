@@ -177,3 +177,6 @@ JOBS API
 
 * Swagger UI Editor (URL: https://editor.swagger.io/)
   - Copy and Past the code from the swagger.yaml file, and performan tests.
+
+* Deploy to Render (URL: https://render.com/)
+  - Sign up / Sign in
