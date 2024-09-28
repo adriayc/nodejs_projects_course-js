@@ -143,3 +143,5 @@ JOBS API
   - Select 'Collection' -> Click '...' -> Click 'Export' -> Select 'Collection v2.1' | Click 'Export'
     Save As: docs.json
     Click 'Save'
+
+* APIMATIC (URL: https://www.apimatic.io/)
