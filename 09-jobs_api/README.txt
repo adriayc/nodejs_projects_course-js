@@ -40,6 +40,9 @@ JOBS API
       $ npm i express-xss-sanitizer
     + Express Rate Limit
       $ npm i express-rate-limit
+    Docs
+    + Yaml.js and Swagger UI Express
+      $ npm i yamljs swagger-ui-express
   - Run app
     $ cd jobs-api
     $ code .              // Open VSCode
@@ -144,7 +147,7 @@ JOBS API
     Save As: docs.json
     Click 'Save'
 
-* APIMATIC (URL: https://www.apimatic.io/) (Now it's paid!!!)
+* APIMATIC (URL: https://www.apimatic.io/) (Now it's paid!!!  )
   - Sign up / Log in
   - Import (Import your API description file)
     > Select your API description file: docs.json

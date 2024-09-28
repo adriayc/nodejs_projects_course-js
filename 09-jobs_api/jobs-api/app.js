@@ -6,6 +6,10 @@ const helmet = require('helmet');
 const cors = require('cors');
 const { xss } = require('express-xss-sanitizer');
 const { rateLimit } = require('express-rate-limit');
+// Swagger (Docs)
+const swaggerUI = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./swagger.yaml');
 // Connect DB
 const connectDB = require('./db/connect');
 // Middlewares
@@ -36,8 +40,11 @@ app.use(cors());
 app.use(xss());
 
 app.get('/', (req, res) => {
-  res.send('Jobs API');
+  res.send('<h1>Jobs API</h1><a href="/api-docs">Documentation</a>');
 });
+
+// Swagger
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 // Routes
 app.use('/api/v1/auth', authRouter);
