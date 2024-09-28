@@ -171,3 +171,6 @@ JOBS API
     > API Version: 1.0
     > Export Format: OpenAPI v3.0 (YAML)
     Click 'Export'
+
+* Swagger UI Editor (URL: https://editor.swagger.io/)
+  - Copy and Past the code from the swagger.yaml file, and performan tests.
