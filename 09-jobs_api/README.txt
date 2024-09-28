@@ -80,3 +80,52 @@ JOBS API
   - Install Heroku CLI (URL: https://devcenter.heroku.com/articles/heroku-cli)
     $ heroku -h
   - Sign up and Log in
+
+* Deploy to Heroku (URL: https://devcenter.heroku.com/articles/deploying-nodejs)
+  - Repository
+    + Local
+      - Remove repo
+        $ rm -rf .git
+      - Initialize repo
+        $ git init
+        $ git add .
+        $ git commit -m "First commit"
+        $ git remote -v
+    + Heroku CLI
+      $ heroku login
+      $ heroku create jobs-api
+      $ heroku config:set JWT_LIFETIME={{LIFETIME}}
+      $ git push heroku main
+  - Heroku
+    + Select and Click 'jobs-api' (App)
+      - Click 'Open app'
+      - Config Vars (Settings -> Click 'Reveal Config Vars')
+        > KEY: JWT_SECRET        VALUE: {{JWT_SECRET}}
+        > KEY: MONGO_URI         VALUE: {{MONGO_URI}}
+    + Restar All Dynos (Click 'More' -> Restar all dynos -> Click 'Restar all dynos')
+    + View Logs (Click 'More' -> View logs)
+    + Open App (Click 'Open app')
+  - Postman
+    + Add Global Variables (Click 'Variables')
+      VARIABLE      INITIAL VALUE                         CURRENT VALUE
+      PROD_URL      https//jobs-api.herokuapp.com/api/v1  https//jobs-api.herokuapp.com/api/v1
+      Click 'Save'
+    + Click 'Add request'
+      - POST
+        > POST: {{PROD_URL}}/auth/login
+          > Body -> raw -> JSON
+          {
+            "username": "adriano@email.com"
+            "password": "adriano123"
+          }
+          > Scripts -> Post-response
+          ```
+          const jsonData = pm.response.json();
+          pm.globals.set("accessToken", jsonData.token);
+          ```
+        Click 'Send'
+      - GET
+        > GET: {{URL}}/jobs
+          > Authorization
+            Type: Bearer Token        Token: {{accessToken}
+        Click 'Send'
