@@ -180,3 +180,17 @@ JOBS API
 
 * Deploy to Render (URL: https://render.com/)
   - Sign up / Sign in
+  - GitHub
+    - Create a new repository (Click 'New')
+      > Owner: adriayc      Repository name: temp-jobs-api
+      > Public
+      Click 'Create repository'
+  - Local App (Repository)
+    $ rm -rf .git
+    $ git init
+    $ git add .
+    $ git commit -m "First commit"
+    Push
+    $ git remote add origin git@github.com:{{USERNAME}}/{{REPO_NAME}}
+    $ git branch -M main
+    $ git push -u origin main
