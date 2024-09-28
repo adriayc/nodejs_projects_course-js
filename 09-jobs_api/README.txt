@@ -129,3 +129,5 @@ JOBS API
           > Authorization
             Type: Bearer Token        Token: {{accessToken}
         Click 'Send'
+
+* Swagger UI (URL: https://swagger.io/)
