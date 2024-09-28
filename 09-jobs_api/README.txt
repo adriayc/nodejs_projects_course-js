@@ -75,3 +75,8 @@ JOBS API
       > Authorization
         Type: Bearer Token        Token: {{accessToken}
     Click 'Send'
+
+* Heroku (URL: https://www.heroku.com/)
+  - Install Heroku CLI (URL: https://devcenter.heroku.com/articles/heroku-cli)
+    $ heroku -h
+  - Sign up and Log in
