@@ -194,3 +194,19 @@ JOBS API
     $ git remote add origin git@github.com:{{USERNAME}}/{{REPO_NAME}}
     $ git branch -M main
     $ git push -u origin main
+  - Web Services (Dashboard -> Click 'New Web Service')
+    > Create a new Web Service
+      > Select {{REPOSITORY}}
+      Click 'Connect'
+    > You are deployin a web service for ...
+      > Name: temp-jobs-api
+      ...
+      > Build Command: npm install
+      > Start Command: node app.js
+      Setting 'Add Environment Variable'
+      Click 'Advanced' -> Click 'Add Environment Variable'
+        > JWT_LIFETIME      1d
+        > JWT_SECRETE       {{JWT_SECRET}}
+        > MONGO_URI         {{MONGO_URI}}
+      Click 'Create Web Service'
+    > Copy URL: https://{{SERVICE_NAME}}.onrender.com (Render)
