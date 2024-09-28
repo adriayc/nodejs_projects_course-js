@@ -131,3 +131,10 @@ JOBS API
         Click 'Send'
 
 * Swagger UI (URL: https://swagger.io/)
+
+* Clone Heroku Project
+  - Clone
+    $ heroku git:clone -a jobs-api
+  - Create .env file
+  - Install dependencies and run app
+    $ npm install && npm start
