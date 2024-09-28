@@ -144,4 +144,30 @@ JOBS API
     Save As: docs.json
     Click 'Save'
 
-* APIMATIC (URL: https://www.apimatic.io/)
+* APIMATIC (URL: https://www.apimatic.io/) (Now it's paid!!!)
+  - Sign up / Log in
+  - Import (Import your API description file)
+    > Select your API description file: docs.json
+    Click 'Import' -> Click 'Proceed' -> Click 'Close'
+  - Edit API (Click 'Edit API')
+    + Settings -> Basic Settings
+      Name: jobs API
+      Click 'Save Basic Settings'
+    + Settings -> Sever Configuration
+      - Environment -> Servers
+        > Name: Server 1        URL: {{HEROKU_URL}}/api/v1
+        Click 'Save Config Settings'
+    + Settings -> Authentication
+      > Type: OAuth2.0 - Bearer Token
+    + EndPoints -> Misc
+      - Select POST Register User | POST Login User
+        > Group: Auth
+        Advanced Settings
+          > Skip authentication?      TRUE
+      - Select GET Get All Jobs | GET Get Single Job | POST Create Job, etc
+        > Group: Jobs
+      Click 'Save Endpoint'
+  - Export API (Click '...' -> Click 'Export API')
+    > API Version: 1.0
+    > Export Format: OpenAPI v3.0 (YAML)
+    Click 'Export'
