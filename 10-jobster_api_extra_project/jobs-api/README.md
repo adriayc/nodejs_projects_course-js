@@ -32,7 +32,7 @@ npm start
 
 - you should see "Server is listening ...." text
 
-#### Spring Cleaning
+#### Spring Cleaning (Info)
 
 ##### Remove Swagger
 
