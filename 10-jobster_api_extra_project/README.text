@@ -3,3 +3,6 @@ JOBSTER API (EXTRA PROJECT)
 * Copy 'job-api', create .env file, and change the name of th DB
 * Install dependencies and run app
   $ npm install && npm run dev
+* Copy the 'client' folder to the root of the app
+  $ npm install
+  $ npm run build       // prod build
