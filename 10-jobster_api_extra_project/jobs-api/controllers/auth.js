@@ -8,7 +8,15 @@ const register = async (req, res) => {
   const user = await User.create({ ...req.body });
   // Get token (Instance methods)
   const token = user.createJWT();
-  res.status(StatusCodes.CREATED).json({ user: { name: user.name }, token });
+  res.status(StatusCodes.CREATED).json({
+    user: {
+      name: user.name,
+      lastName: user.lastName,
+      email: user.email,
+      location: user.location,
+      token,
+    },
+  });
 };
 
 const login = async (req, res) => {
@@ -29,7 +37,15 @@ const login = async (req, res) => {
   }
 
   const token = user.createJWT();
-  res.status(StatusCodes.OK).json({ user: { name: user.name }, token });
+  res.status(StatusCodes.OK).json({
+    user: {
+      name: user.name,
+      lastName: user.lastName,
+      email: user.email,
+      location: user.location,
+      token,
+    },
+  });
 };
 
 module.exports = {
