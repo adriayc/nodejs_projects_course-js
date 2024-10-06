@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 require('express-async-errors');
+const path = require('path');
 // Extra security packages
 const helmet = require('helmet');
 const { xss } = require('express-xss-sanitizer');
@@ -17,6 +18,7 @@ const jobsRouter = require('./routes/jobs');
 const app = express();
 
 // Middlewares
+app.use(express.static(path.resolve(__dirname, './client/build')));
 app.use(express.json());
 // Extra security
 app.use(helmet());
@@ -25,6 +27,11 @@ app.use(xss());
 // Routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/jobs', authenticateUser, jobsRouter);
+
+// Serve index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+});
 
 // Others middlewares
 app.use(notFoundMiddleware);
