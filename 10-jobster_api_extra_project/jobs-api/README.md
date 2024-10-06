@@ -204,7 +204,7 @@ res.status(StatusCodes.CREATED).json({
 
 - Login and Register Works Now :):):)
 
-#### Create Test User
+#### Create Test User (Info)
 
 - test front-end request
 - in postman or front-end
