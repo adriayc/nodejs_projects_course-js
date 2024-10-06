@@ -24,6 +24,19 @@ const UserSchema = new mongoose.Schema({
     minLength: 6,
     required: [true, 'Please provide password'],
   },
+  // LastName and Location (Font-End)
+  lastName: {
+    type: String,
+    trim: true,
+    maxLength: 20,
+    default: 'lastName',
+  },
+  location: {
+    type: String,
+    trim: true,
+    maxLength: 20,
+    default: 'My city',
+  },
 });
 
 // Pre middleware
