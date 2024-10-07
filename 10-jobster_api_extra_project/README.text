@@ -6,3 +6,5 @@ JOBSTER API (EXTRA PROJECT)
 * Copy the 'client' folder to the root of the app
   $ npm install
   $ npm run build       // prod build
+* Populate Database
+  $ node populate
