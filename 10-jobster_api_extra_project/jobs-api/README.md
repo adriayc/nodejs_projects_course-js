@@ -330,7 +330,7 @@ jobType: {
 
 - default property just for fun, values will be provided by front-end
 
-#### Setup Mock Data
+#### Setup Mock Data (Info)
 
 - [Mockaroo](https://www.mockaroo.com/)
 - create mock-data.json (root)
