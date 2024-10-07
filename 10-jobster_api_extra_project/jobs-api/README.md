@@ -366,7 +366,7 @@ const start = async () => {
 start();
 ```
 
-#### Modify Get All Jobs
+#### Modify Get All Jobs (Info)
 
 - latest mongoose version change
 
