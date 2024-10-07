@@ -5,10 +5,21 @@ const Job = require('../models/Job');
 const { NotFoundError, BadRequestError } = require('../errors');
 
 const getAllJobs = async (req, res) => {
-  // const jobs = await Job.find({ createdBy: req.user.userId }).sort('createdAt');
-  const jobs = await Job.find({ createdBy: req.user.userId });
-  // console.log(jobs);
-  res.status(StatusCodes.OK).json({ jobs, count: jobs.length });
+  const { search, status, jobType, sort } = req.query;
+
+  // Query object
+  const queryObject = {
+    createdBy: req.user.userId,
+  };
+
+  // Search
+  if (search) {
+    queryObject.position = { $regex: search, $options: 'i' };
+  }
+
+  let result = Job.find(queryObject);
+  const jobs = await result;
+  res.status(StatusCodes.OK).json({ jobs });
 };
 const getJob = async (req, res) => {
   const {
