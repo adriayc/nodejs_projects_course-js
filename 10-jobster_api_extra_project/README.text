@@ -8,3 +8,5 @@ JOBSTER API (EXTRA PROJECT)
   $ npm run build       // prod build
 * Populate Database
   $ node populate
+* Install dependencies
+  $ npm install moment
