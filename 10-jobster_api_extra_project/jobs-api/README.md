@@ -537,6 +537,10 @@ app.set('trust proxy', 1);
 app.use(express.static(path.resolve(__dirname, './client/build')));
 ```
 
+#### MongoDB Aggregation Pipeline
+
+[Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
+
 #### Setup Stats Route
 
 controllers/jobs
