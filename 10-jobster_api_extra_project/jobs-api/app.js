@@ -17,6 +17,9 @@ const jobsRouter = require('./routes/jobs');
 
 const app = express();
 
+// Security
+app.set('trust proxy', 1);
+
 // Middlewares
 app.use(express.static(path.resolve(__dirname, './client/build')));
 app.use(express.json());
