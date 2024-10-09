@@ -10,3 +10,37 @@ JOBSTER API (EXTRA PROJECT)
   $ node populate
 * Install dependencies
   $ npm install moment
+* Deploy to Render (URL: https://render.com/)
+  - Push repository
+    + GitHub
+      > Create a new repository
+        > repository name: temp-joster-api
+        > Public
+        Click 'Create repository'
+    + Local
+      $ rm -rf .git
+      $ git init
+      $ git add .
+      $ git commit -m "First commit"
+      Push GitHub
+      $ git remote add origin git@github.com:<user_name>/<repository_name>
+      $ git branch -M main
+      $ git push -u origin main
+  - Render
+    > Click 'New +' -> 'Web Service'
+      > Connect a repository  > Search: <user_name>/<repository_name> -> Click 'Connect'
+        > You are deploying a web service for <user_name>/<repository_name>
+          > Name: jobster-api
+          ...
+          > Build Command: $ npm install
+          > Start Command: $ node app.js
+          > Click 'Advanced'
+            > Click 'Add Secret File"
+              > Secret File
+                > Filename: .env
+                > File contents
+                  [Paste file contents here]
+                Click 'Save'
+          Click 'Create Web Service'
+    > Test the deployment URL (https://jobster-api.onrender.com)
+      > Open the URL in the browser
