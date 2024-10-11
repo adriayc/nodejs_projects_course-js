@@ -31,6 +31,8 @@ FILE/IMAGE UPLOAD
       $ npm i jsonwebtoken
     + Express Fileupload
       $ npm i express-fileupload
+    + Cloudinary
+      $ npm i cloudinary
 
 * Postman
   - Create 'Blank collection'
