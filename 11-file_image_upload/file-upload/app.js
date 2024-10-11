@@ -23,7 +23,7 @@ cloudinary.config({
 // Middleware
 app.use(express.static('./public'));
 app.use(express.json());
-app.use(fileUpload()); // File upload setup
+app.use(fileUpload({ useTempFiles: true })); // File upload setup
 
 app.get('/', (req, res) => {
   res.send('<h1>File Upload</h1>');
