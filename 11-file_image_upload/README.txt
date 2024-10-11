@@ -56,3 +56,8 @@ FILE/IMAGE UPLOAD
           Key                 Value
           image     [File]    Select files...
         Click 'Send'
+
+* Cloudinary
+  - Sign Up / Log In
+  - Copy API environment variable -> Settings -> API Keys
+    > API environment variable: CLOUDINARY_URL=cloudinary://{{API_KEY}}:{{API_SECRET}}@{{USERNAME}}
