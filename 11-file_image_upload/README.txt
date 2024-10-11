@@ -29,6 +29,8 @@ FILE/IMAGE UPLOAD
       $ npm install mongoose --save
     + JSON Web Token
       $ npm i jsonwebtoken
+    + Express Fileupload
+      $ npm i express-fileupload
 
 * Postman
   - Create 'Blank collection'

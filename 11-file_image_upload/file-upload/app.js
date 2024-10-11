@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 require('express-async-errors');
+const fileUpload = require('express-fileupload');
 // Middlewares
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
@@ -12,7 +13,9 @@ const productRouter = require('./routes/productRoutes');
 const app = express();
 
 // Middleware
+app.use(express.static('./public'));
 app.use(express.json());
+app.use(fileUpload()); // File upload setup
 
 app.get('/', (req, res) => {
   res.send('<h1>File Upload</h1>');
