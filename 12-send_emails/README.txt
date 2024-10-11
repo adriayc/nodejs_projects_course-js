@@ -29,3 +29,5 @@ SEND EMAILS
       $ npm i jsonwebtoken
     + Mongoose
       $ npm install mongoose --save
+    + Nodemailer
+      $ npm install nodemailer
