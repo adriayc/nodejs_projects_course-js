@@ -39,7 +39,11 @@ FILE/IMAGE UPLOAD
       - POST
         > GET: {{URL}}/products
           Body -> raw -> JSON
-          {}
+          {
+            "name": "Product name",
+            "price": 300,
+            "image": "123"
+          }
         Click 'Send'
       - GET
         > GET: {{URL}}/products
