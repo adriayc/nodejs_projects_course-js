@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const { StatusCodes } = require('http-status-codes');
 const cloudinary = require('cloudinary').v2;
 // Errors
@@ -47,6 +48,9 @@ const uploadProductImage = async (req, res) => {
     }
   );
   // console.log(result);
+
+  // Remove tmp file (Used to synchronously remove a file or symbolic link from the filesystem)
+  fs.unlinkSync(req.files.image.tempFilePath);
 
   return res.status(StatusCodes.OK).json({ image: { src: result.secure_url } });
 };
