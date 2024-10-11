@@ -29,3 +29,23 @@ FILE/IMAGE UPLOAD
       $ npm install mongoose --save
     + JSON Web Token
       $ npm i jsonwebtoken
+
+* Postman
+  - Create 'Blank collection'
+    Name: File Uploads
+    + Create 'variables Globals' (Click Environment quick look -> Globals | Edit)
+      > Variable: URL     Initial value: localhost:3000/api/v1    Current value: localhost:3000/api/v1
+    + Add a request
+      - POST
+        > GET: {{URL}}/products
+          Body -> raw -> JSON
+          {}
+        Click 'Send'
+      - GET
+        > GET: {{URL}}/products
+        Click 'Send'
+      - POST
+        > GET: {{URL}}/products/uploads
+          Body -> raw -> JSON
+          {}
+        Click 'Send'
