@@ -50,6 +50,7 @@ FILE/IMAGE UPLOAD
         Click 'Send'
       - POST
         > GET: {{URL}}/products/uploads
-          Body -> raw -> JSON
-          {}
+          Body -> form-data
+          Key                 Value
+          image     [File]    Select files...
         Click 'Send'
