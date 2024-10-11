@@ -114,3 +114,6 @@ A[JSON Web Token (JWT)](https://jwt.io/) is a compact, URL-safe means of represe
 
 ## Nodemailer
 [Nodemailer](https://nodemailer.com/) is a module for Node.js application that allows easy email sending.
+
+### Ethereal Email
+[Ethereal](https://ethereal.email/) is a fake SMTP service, mostly aimed at Nodemailer and EmailEngine users (but not limited to).

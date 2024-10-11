@@ -31,3 +31,5 @@ SEND EMAILS
       $ npm install mongoose --save
     + Nodemailer
       $ npm install nodemailer
+  - Ethereal Email
+    + Create account and Login
