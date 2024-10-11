@@ -33,3 +33,6 @@ SEND EMAILS
       $ npm install nodemailer
   - Ethereal Email
     + Create account and Login
+  - SendGrid for production (URL: https://sendgrid.com/en-us)
+    + Sin up/Sign in
+    + Tell Us About Yourself
