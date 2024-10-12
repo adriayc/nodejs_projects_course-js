@@ -31,9 +31,21 @@ SEND EMAILS
       $ npm install mongoose --save
     + Nodemailer
       $ npm install nodemailer
+    + SendGrid (For Prod)
+      $ npm install --save @sendgrid/mail
   - Ethereal Email
     + Create account and Login
   - SendGrid for production (URL: https://sendgrid.com/en-us)
     + Sin up/Sign in
     + Tell Us About Yourself
     + Send a single send -> Click 'Create Sender identity'
+    + Email API -> Integration Guide -> Web API | Click 'Choose' -> Node.js | Click 'Choose'
+      ...
+      2) Create an API key
+        > My First API Key
+        Click 'Create Key'
+        NOTE: COPY API Key
+      3) Create an environment variable
+      4) Install the package
+      5) Send your firt email
+      Click 'Next: Verify Integration'
