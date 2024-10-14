@@ -39,3 +39,25 @@ E-COMMERCE API
     $ npm install         // Install all dependencies (Optional)
     $ node <fileName>.js  // Run a file (Optional)
     $ npm start
+
+* Postman
+  - Create 'Blank collection'
+    Name: 14-E-commerce-API
+    + Create new 'Environment' [Click 'Variables' -> Add]
+      > Name: Dev Environment
+        Variable              Initial value                 Current value
+        URL                   http://localhost:5000/api/v1  http://localhost:5000/api/v1
+    + Add a request
+      - POST
+        > GET: {{URL}}/auth/register
+          Body -> raw -> JSON
+          {}
+        Click 'Send'
+      - POST
+        > GET: {{URL}}/auth/login
+          Body -> raw -> JSON
+          {}
+        Click 'Send'
+      - GET
+        > GET: {{URL}}/auth/logout
+        Click 'Send'
