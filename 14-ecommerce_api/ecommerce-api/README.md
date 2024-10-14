@@ -23,7 +23,7 @@
 - [x] setup 404 and errorHandler middleware
 - [x] import 'exress-async-errors' package
 
-#### 404 vs ErrorHandler Middleware
+#### 404 vs ErrorHandler Middleware (Info)
 
 #### Morgan Pacakge
 
