@@ -35,3 +35,6 @@ STRIPE PAYMENT
     $ npm install         // Install all dependencies (Optional)
     $ node <fileName>.js  // Run a file (Optional)
     $ npm start
+
+* Stripe
+  - Create account/Sign in

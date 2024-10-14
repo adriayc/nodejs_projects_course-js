@@ -117,3 +117,6 @@ A[JSON Web Token (JWT)](https://jwt.io/) is a compact, URL-safe means of represe
 
 ### Ethereal Email
 [Ethereal](https://ethereal.email/) is a fake SMTP service, mostly aimed at Nodemailer and EmailEngine users (but not limited to).
+
+## Stripe
+[Stripe](https://stripe.com/) powers online and in-person payment processing and financial solutions for businesses of all sizes. Accept payments, send payouts, and automate financial processes with a suite of APIs and no-code tools.
