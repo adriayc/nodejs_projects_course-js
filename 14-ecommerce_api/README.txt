@@ -31,6 +31,8 @@ E-COMMERCE API
       $ npm i morgan
     + Validator.js (String validators and sanitizers)
       $ npm i validator
+    + Bcrypt.js
+      $ npm i bcryptjs
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
