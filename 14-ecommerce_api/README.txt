@@ -23,6 +23,8 @@ E-COMMERCE API
       $ npm install express --save
     + DotEnv
       $ npm i dotenv
+    + Mongoose
+      $ npm install mongoose --save
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
