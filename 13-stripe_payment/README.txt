@@ -29,6 +29,8 @@ STRIPE PAYMENT
       $ npm i jsonwebtoken
     + Mongoose
       $ npm install mongoose --save
+    + Stripe library
+      $ npm install --save stripe
   - Run app
     $ cd store-api
     $ code .              // Open VSCode
@@ -44,3 +46,7 @@ STRIPE PAYMENT
   - Copy API Key [Dashboard -> Developers -> API keys]
     + Publishable key - (Frontend)
     + Secret key [Click 'Reveal test key'] - (Backend)
+  - Documentation [Dashboard -> Help -> Developers Docs -> Click 'Get started with payments']
+    + Accept online payments
+      | Architecture: JavaScript SDK   | Frontend: HTML   | Backend: Node
+        > Click 'Custom payment flow'

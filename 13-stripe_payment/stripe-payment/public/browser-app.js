@@ -5,8 +5,9 @@ const purchase = [
 const total_amount = 10998;
 const shipping_fee = 1099;
 
+// Publishable key (Stripe)
 var stripe = Stripe(
-  'pk_test_51I87djFp5pnuKUXgBVIHiR36vVAWyfuyb7ckrhgyDNA1kM0GWHas9ZGUAgwJSFNUxrbyE6NwlMNmls1iGSfzHDdE00DQB3y6AH'
+  'pk_test_51Q9BtVFssgcjnSKYF9CKrRwWnWpMlDE6p5icjMMxsnIPev5yU4IsIHb73Hv6tJonwYwr64sn4hOwOR7XsscMRjCj00RCd4aFFr'
 );
 
 // The items the customer wants to buy
