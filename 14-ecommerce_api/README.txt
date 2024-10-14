@@ -19,6 +19,10 @@ E-COMMERCE API
       $ npm install --save-dev nodemon
     + Http Status Codes
       $ npm i http-status-codes
+    + Express
+      $ npm install express --save
+    + DotEnv
+      $ npm i dotenv
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
