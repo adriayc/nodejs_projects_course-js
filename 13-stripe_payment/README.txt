@@ -38,3 +38,9 @@ STRIPE PAYMENT
 
 * Stripe
   - Create account/Sign in
+  - Create new account
+    > Name: Comfy Store
+    Click 'Create'
+  - Copy API Key [Dashboard -> Developers -> API keys]
+    + Publishable key - (Frontend)
+    + Secret key [Click 'Reveal test key'] - (Backend)
