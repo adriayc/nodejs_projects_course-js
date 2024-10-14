@@ -27,6 +27,8 @@ E-COMMERCE API
       $ npm install mongoose --save
     + ExpressJS Async Errors
       $ npm i express-async-errors
+    + Morgan (HTTP request logger middleware)
+      $ npm i morgan
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app

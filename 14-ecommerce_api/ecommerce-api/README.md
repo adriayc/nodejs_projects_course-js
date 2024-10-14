@@ -25,7 +25,7 @@
 
 #### 404 vs ErrorHandler Middleware (Info)
 
-#### Morgan Pacakge
+#### Morgan Package
 
 - [Morgan Package](https://www.npmjs.com/package/morgan)
 

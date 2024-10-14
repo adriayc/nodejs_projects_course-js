@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 require('express-async-errors');
+const morgan = require('morgan');
 // Database
 const connectDB = require('./db/connect');
 // Middlewares
@@ -10,16 +11,13 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 const app = express();
 
 // Call middleware
+app.use(morgan('tiny')); // HTTP request logger
 app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  // Error handler (Middleware) - Invoked on an existing route
-  throw new Error('Hello there');
   res.send('E-commerce API');
 });
-// Not found (Middleware) - Route does not exist
-//localhost:5000/apples
 
 // Call custom middleware
 app.use(notFoundMiddleware);
