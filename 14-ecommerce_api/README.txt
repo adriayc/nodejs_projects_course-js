@@ -25,6 +25,8 @@ E-COMMERCE API
       $ npm i dotenv
     + Mongoose
       $ npm install mongoose --save
+    + ExpressJS Async Errors
+      $ npm i express-async-errors
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
