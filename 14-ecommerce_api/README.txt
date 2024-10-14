@@ -29,6 +29,8 @@ E-COMMERCE API
       $ npm i express-async-errors
     + Morgan (HTTP request logger middleware)
       $ npm i morgan
+    + Validator.js (String validators and sanitizers)
+      $ npm i validator
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
