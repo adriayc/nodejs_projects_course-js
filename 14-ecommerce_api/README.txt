@@ -35,6 +35,8 @@ E-COMMERCE API
       $ npm i bcryptjs
     + JSON Web Token
       $ npm i jsonwebtoken
+    + Cookie Parser
+      $ npm i cookie-parser
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
