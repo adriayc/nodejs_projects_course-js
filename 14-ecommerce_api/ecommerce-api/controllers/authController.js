@@ -30,7 +30,31 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  res.send('Login user');
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    throw new CustomAPIError.BadRequestError(
+      'Please provide email and password'
+    );
+  }
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new CustomAPIError.UnauthenticatedError('Invalid credentials');
+  }
+  const isPasswordCorrect = await user.comparePassword(password);
+
+  if (!isPasswordCorrect) {
+    throw new CustomAPIError.UnauthenticatedError('Invalid credentials');
+  }
+
+  // Custom user object
+  const tokenUser = { userId: user._id, name: user.name, role: user.role };
+
+  // Attach cookie y create JWT
+  attachCookiesToResponse({ res, user: tokenUser });
+
+  res.status(StatusCodes.OK).json({ user: tokenUser });
 };
 
 const logout = async (req, res) => {
