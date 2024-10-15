@@ -16,14 +16,15 @@ const app = express();
 // Call middleware
 app.use(morgan('tiny')); // HTTP request logger
 app.use(express.json());
-app.use(cookieParser());
+app.use(cookieParser(process.env.JWT_SECRET));
 
 // Routes
 app.get('/', (req, res) => {
   res.send('E-commerce API');
 });
 app.get('/api/v1', (req, res) => {
-  console.log(req.cookies);
+  // console.log(req.cookies);
+  console.log(req.signedCookies);
   res.send('E-commerce API with Cookies');
 });
 
