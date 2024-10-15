@@ -1,4 +1,5 @@
 const { StatusCodes } = require('http-status-codes');
+const jwt = require('jsonwebtoken');
 // Models
 const User = require('../models/User');
 // Errors
@@ -17,7 +18,14 @@ const register = async (req, res) => {
   const role = isFirstAccount ? 'admin' : 'user';
 
   const user = await User.create({ name, email, password, role });
-  res.status(StatusCodes.CREATED).json({ user });
+
+  // Token
+  const tokenUser = { userId: user._id, name: user.name, role: user.role };
+  const token = jwt.sign(tokenUser, 'jwtSecret', {
+    expiresIn: '1d',
+  });
+
+  res.status(StatusCodes.CREATED).json({ user: tokenUser, token });
 };
 
 const login = async (req, res) => {

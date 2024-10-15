@@ -33,6 +33,8 @@ E-COMMERCE API
       $ npm i validator
     + Bcrypt.js
       $ npm i bcryptjs
+    + JSON Web Token
+      $ npm i jsonwebtoken
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
