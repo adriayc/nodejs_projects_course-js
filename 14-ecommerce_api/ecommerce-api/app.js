@@ -3,6 +3,7 @@ require('dotenv').config();
 require('express-async-errors');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 // Database
 const connectDB = require('./db/connect');
 // Routers
@@ -17,6 +18,8 @@ const app = express();
 app.use(morgan('tiny')); // HTTP request logger
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
+app.use(express.static('./public')); // Config static files
+app.use(cors());
 
 // Routes
 app.get('/', (req, res) => {

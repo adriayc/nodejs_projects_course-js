@@ -37,6 +37,8 @@ E-COMMERCE API
       $ npm i jsonwebtoken
     + Cookie Parser
       $ npm i cookie-parser
+    + Cors
+      $ npm i cors
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
@@ -67,3 +69,10 @@ E-COMMERCE API
       - GET
         > GET: {{URL}}/auth/logout
         Click 'Send'
+
+* Front-end (Recct)
+  + Install dependencies & Run app
+    $ npm install
+    $ npm start
+  + Add 'proxy' attribute in package.json file
+    > "proxy": "http://localhost:5000"
