@@ -1,11 +1,10 @@
 const { StatusCodes } = require('http-status-codes');
-const jwt = require('jsonwebtoken');
 // Models
 const User = require('../models/User');
 // Errors
 const CustomAPIError = require('../errors');
 // Utils
-const { createJWT } = require('../utils');
+const { attachCookiesToResponse } = require('../utils');
 
 const register = async (req, res) => {
   const { email, name, password } = req.body;
@@ -21,16 +20,11 @@ const register = async (req, res) => {
 
   const user = await User.create({ name, email, password, role });
 
-  // Token
+  // Custom user object
   const tokenUser = { userId: user._id, name: user.name, role: user.role };
-  const token = createJWT({ payload: tokenUser });
 
-  // Cookie
-  const oneDay = 1000 * 60 * 60 * 24; // 1d = 24hrs
-  res.cookie('token', token, {
-    expires: new Date(Date.now() + oneDay),
-    httpOnly: true,
-  });
+  // Attach cookie y create JWT
+  attachCookiesToResponse({ res, user: tokenUser });
 
   res.status(StatusCodes.CREATED).json({ user: tokenUser });
 };
