@@ -8,6 +8,7 @@ const cors = require('cors');
 const connectDB = require('./db/connect');
 // Routers
 const authRouter = require('./routes/authRoutes');
+const userRouter = require('./routes/userRoutes');
 // Middlewares
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
@@ -32,6 +33,7 @@ app.get('/api/v1', (req, res) => {
 });
 
 app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/users', userRouter);
 
 // Call custom middleware
 app.use(notFoundMiddleware);
