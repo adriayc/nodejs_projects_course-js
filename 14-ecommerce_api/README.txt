@@ -56,19 +56,44 @@ E-COMMERCE API
         Variable              Initial value                 Current value
         URL                   http://localhost:5000/api/v1  http://localhost:5000/api/v1
     + Add a request
-      - POST
-        > GET: {{URL}}/auth/register
-          Body -> raw -> JSON
-          {}
-        Click 'Send'
-      - POST
-        > GET: {{URL}}/auth/login
-          Body -> raw -> JSON
-          {}
-        Click 'Send'
-      - GET
-        > GET: {{URL}}/auth/logout
-        Click 'Send'
+      * Auth
+        - POST
+          > GET: {{URL}}/auth/register
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - POST
+          > GET: {{URL}}/auth/login
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/auth/logout
+          Click 'Send'
+      * User
+        - GET
+          > GET: {{URL}}/users
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/users/1
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/users/showMe
+          Click 'Send'
+        - PATCH
+          > PATCH: {{URL}}/users/updateUser
+            Body -> raw -> JSON
+            {
+              "name": "john"
+            }
+          Click 'Send'
+        - PATCH
+          > PATCH: {{URL}}/users/updateUserPassword
+            Body -> raw -> JSON
+            {
+              "password": "secret"
+            }
+          Click 'Send'
 
 * Front-end (Recct)
   + Install dependencies & Run app
