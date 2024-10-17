@@ -25,23 +25,46 @@ const showCurrentUser = async (req, res) => {
   res.status(StatusCodes.OK).json({ user: req.user });
 };
 
+// Update user with findOneAndUpdate
+// const updateUser = async (req, res) => {
+//   const { name, email } = req.body;
+
+//   if (!name || !email) {
+//     throw new CustomError.BadRequestError('Please provide all values');
+//   }
+//   const user = await User.findOneAndUpdate(
+//     { _id: req.user.userId },
+//     // Data
+//     { name, email },
+//     { new: true, runValidators: true }
+//   );
+
+//   // Custom user object
+//   const tokenUser = createTokenUser(user);
+
+//   // Attach cookie and create JWT
+//   attachCookiesToResponse({ res, user: tokenUser });
+
+//   res.status(StatusCodes.OK).json({ user: tokenUser });
+// };
+
+// Update user with user.save()
 const updateUser = async (req, res) => {
   const { name, email } = req.body;
 
   if (!name || !email) {
     throw new CustomError.BadRequestError('Please provide all values');
   }
-  const user = await User.findOneAndUpdate(
-    { _id: req.user.userId },
-    // Data
-    { name, email },
-    { new: true, runValidators: true }
-  );
+  const user = await User.findOne({ _id: req.user.userId });
+  user.name = name;
+  user.email = email;
+
+  await user.save();
 
   // Custom user object
   const tokenUser = createTokenUser(user);
 
-  // Attach cookie y create JWT
+  // Attach cookie and create JWT
   attachCookiesToResponse({ res, user: tokenUser });
 
   res.status(StatusCodes.OK).json({ user: tokenUser });
