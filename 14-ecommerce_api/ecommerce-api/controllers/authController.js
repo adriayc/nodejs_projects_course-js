@@ -4,7 +4,7 @@ const User = require('../models/User');
 // Errors
 const CustomAPIError = require('../errors');
 // Utils
-const { attachCookiesToResponse } = require('../utils');
+const { attachCookiesToResponse, createTokenUser } = require('../utils');
 
 const register = async (req, res) => {
   const { email, name, password } = req.body;
@@ -21,7 +21,7 @@ const register = async (req, res) => {
   const user = await User.create({ name, email, password, role });
 
   // Custom user object
-  const tokenUser = { userId: user._id, name: user.name, role: user.role };
+  const tokenUser = createTokenUser(user);
 
   // Attach cookie y create JWT
   attachCookiesToResponse({ res, user: tokenUser });
@@ -49,7 +49,7 @@ const login = async (req, res) => {
   }
 
   // Custom user object
-  const tokenUser = { userId: user._id, name: user.name, role: user.role };
+  const tokenUser = createTokenUser(user);
 
   // Attach cookie y create JWT
   attachCookiesToResponse({ res, user: tokenUser });
