@@ -94,6 +94,31 @@ E-COMMERCE API
               "password": "secret"
             }
           Click 'Send'
+      * Product
+        - POST
+          > POST: {{URL}}/products
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/products
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/products/1
+          Click 'Send'
+        - PATCH
+          > PATCH: {{URL}}/products/1
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - DELETE
+          > DELETE: {{URL}}/products/1
+          Click 'Send'
+        - POST
+          > POST: {{URL}}/products/uploadImage
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
 
 * Front-end (Recct)
   + Install dependencies & Run app
