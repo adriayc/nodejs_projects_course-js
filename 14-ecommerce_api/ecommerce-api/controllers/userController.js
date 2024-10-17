@@ -3,6 +3,8 @@ const { StatusCodes } = require('http-status-codes');
 const User = require('../models/User');
 // Errors
 const CustomError = require('../errors');
+// Utils
+const { attachCookiesToResponse, createTokenUser } = require('../utils');
 
 const getAllUsers = async (req, res) => {
   console.log(req.user);
@@ -24,7 +26,25 @@ const showCurrentUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-  res.send(req.body);
+  const { name, email } = req.body;
+
+  if (!name || !email) {
+    throw new CustomError.BadRequestError('Please provide all values');
+  }
+  const user = await User.findOneAndUpdate(
+    { _id: req.user.userId },
+    // Data
+    { name, email },
+    { new: true, runValidators: true }
+  );
+
+  // Custom user object
+  const tokenUser = createTokenUser(user);
+
+  // Attach cookie y create JWT
+  attachCookiesToResponse({ res, user: tokenUser });
+
+  res.status(StatusCodes.OK).json({ user: tokenUser });
 };
 
 const updateUserPassword = async (req, res) => {
