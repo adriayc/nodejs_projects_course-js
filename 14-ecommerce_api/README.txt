@@ -120,7 +120,27 @@ E-COMMERCE API
           > POST: {{URL}}/products/uploadImage
             Body -> form-data
             KEY                   VALUE
-            image        [File]   Click 'Select Files'   
+            image        [File]   Click 'Select Files'
+          Click 'Send'
+      * Review
+        - POST
+          > POST: {{URL}}/reviews
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/reviews
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/reviews/1
+          Click 'Send'
+        - PATCH
+          > PATCH: {{URL}}/reviews/1
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - DELETE
+          > DELETE: {{URL}}/reviews/1
           Click 'Send'
 
 * Front-end (Recct)
