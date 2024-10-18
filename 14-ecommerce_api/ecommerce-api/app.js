@@ -4,6 +4,7 @@ require('express-async-errors');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
 // Database
 const connectDB = require('./db/connect');
 // Routers
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(express.static('./public')); // Config static files
 app.use(cors());
+app.use(fileUpload());
 
 // Routes
 app.get('/', (req, res) => {

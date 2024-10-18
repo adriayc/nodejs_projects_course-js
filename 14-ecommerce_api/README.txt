@@ -39,6 +39,8 @@ E-COMMERCE API
       $ npm i cookie-parser
     + Cors
       $ npm i cors
+    + Express Fileupload
+      $ npm i express-fileupload
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
@@ -116,8 +118,9 @@ E-COMMERCE API
           Click 'Send'
         - POST
           > POST: {{URL}}/products/uploadImage
-            Body -> raw -> JSON
-            {}
+            Body -> form-data
+            KEY                   VALUE
+            image        [File]   Click 'Select Files'   
           Click 'Send'
 
 * Front-end (Recct)
