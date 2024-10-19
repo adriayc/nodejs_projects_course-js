@@ -149,3 +149,7 @@ E-COMMERCE API
     $ npm start
   + Add 'proxy' attribute in package.json file
     > "proxy": "http://localhost:5000"
+
+* Reset Database (Back-end)
+  + Remove all products and reviews
+  + Create a new product and two reviews (With differents users)
