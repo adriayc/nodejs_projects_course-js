@@ -174,3 +174,15 @@ E-COMMERCE API
           [*] Include Import Statements
           [*] Include Driver Syntax
         Click 'Close'
+    - Aggregation (Additional Group ID - Example) [Database -> 'Browse collections' -> 'e-commerce-api' | Click 'reviews' -> Click 'Aggregation']
+      + Click '+ Add Stage'
+        > Stage 1: $match [Select]
+          {
+            "product": ObjectId('{{PRODUCT_ID}}')
+          }
+      + Click '+ Add Stage'
+        > Stage 2: $group [Select]
+          {
+            _id: "$rating",
+            amount: { $sum: 1 }
+          }
