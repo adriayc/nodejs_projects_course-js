@@ -153,3 +153,24 @@ E-COMMERCE API
 * Reset Database (Back-end)
   + Remove all products and reviews
   + Create a new product and two reviews (With differents users)
+
+* Aggregation pipeline
+  + MongoDB Atlas
+    - Aggregation [Database -> 'Browse collections' -> 'e-commerce-api' | Click 'reviews' -> Click 'Aggregation']
+      + Click '+ Add Stage'
+        > Stage 1: $match [Select]
+          {
+            "product": ObjectId('{{PRODUCT_ID}}')
+          }
+      + Click '+ Add Stage'
+        > Stage 2: $group [Select]
+          {
+            _id: null,
+            avarageRating: { $avg: "$rating" }
+            numOfReviews: { $sum: 1, }
+          }
+      Click '</> Export to language'
+        > Node      Click 'COPY!!!'
+          [*] Include Import Statements
+          [*] Include Driver Syntax
+        Click 'Close'
