@@ -35,4 +35,18 @@ const ReviewSchema = mongoose.Schema(
 // One review per product and per user
 ReviewSchema.index({ product: 1, user: 1 }, { unique: true });
 
+ReviewSchema.statics.calculateAverageRating = async function (productId) {
+  console.log(productId);
+};
+
+ReviewSchema.post('save', async function () {
+  // console.log('Post save hook called');
+  await this.constructor.calculateAverageRating(this.product);
+});
+// ReviewSchema.post('remove', async function () { // Error, old version
+ReviewSchema.post('deleteOne', async function () {
+  // console.log('Post remove hook called');
+  await this.constructor.calculateAverageRating(this.product);
+});
+
 module.exports = mongoose.model('Review', ReviewSchema);
