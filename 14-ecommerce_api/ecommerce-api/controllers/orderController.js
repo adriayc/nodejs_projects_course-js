@@ -7,6 +7,12 @@ const CustomError = require('../errors');
 // Utils
 const { checkPermissions } = require('../utils');
 
+// Fake stripe
+const fakeStripeAPI = async ({ amount, currency }) => {
+  const client_secret = 'someRandomValue';
+  return { client_secret, amount };
+};
+
 const createOrder = async (req, res) => {
   const { tax, shippingFee, items: cartItems } = req.body;
 
@@ -42,10 +48,29 @@ const createOrder = async (req, res) => {
     // Calculate subtotal
     subtotal += item.amount * price;
   }
-  console.log(orderItems);
-  console.log(subtotal);
+  // console.log(orderItems);
+  // console.log(subtotal);
 
-  res.send('Create order');
+  // Calculate total
+  const total = tax + shippingFee + subtotal;
+
+  // Get client secret (Fake Stripe)
+  const paymentIntent = await fakeStripeAPI({ amount: total, currency: 'usd' });
+
+  // Create order
+  const order = await Order.create({
+    tax,
+    shippingFee,
+    orderItems,
+    subtotal,
+    total,
+    user: req.user.userId,
+    clientSecret: paymentIntent.client_secret,
+  });
+
+  res
+    .status(StatusCodes.CREATED)
+    .json({ order, clientSecret: order.clientSecret });
 };
 
 const getAllOrders = async (req, res) => {
