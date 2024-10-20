@@ -205,3 +205,18 @@ E-COMMERCE API
             _id: "$rating",
             amount: { $sum: 1 }
           }
+
+* Docgen Library (URL: https://github.com/thedevsaddam/docgen)
+  - Install and Uninstall
+    + Install Linux
+      $ curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh \
+        && sudo chmod +x install.sh \
+        && sudo ./install.sh \
+        && rm install.sh
+    + Uninstall Linux
+      $ curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/uninstall.sh -o uninstall.sh \
+        && sudo chmod +x uninstall.sh \
+        && sudo ./uninstall.sh \
+        && rm uninstall.sh
+  - Commands
+    $ docgen --help             // help for docgen
