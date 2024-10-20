@@ -243,3 +243,31 @@ E-COMMERCE API
   - COPY and PAST 'docs.json' inside root app and generate doc
   - COPY and PAST 'index.html' inside 'public/' directory
   - Show doc (URL: http://localhost:5000/)
+
+* Deployment
+  - Heroku (URL: https://www.heroku.com/)
+    + Sign up / Log in
+    + Install heroku CLI
+    + Change start to "node app.js"
+    + Setup node version in package.json
+      "engine": { "node": "20.x" }
+    + Create "Profile" file in root app
+      "web: node app.js"
+    + Remove existing git repo
+      $ rm -rf .git
+    + Git Local
+      $ git init
+      $ git add .
+      $ git commit -m "First commit"
+    + Heroku CLI
+      $ heroku login                  // Login
+      $ heroku create "{{APP_NAME}}"  // Create app
+      $ git remove -v                 // Show remotes
+      >> Setup env vars in GUI
+        > Heroku -> select "App Name" -> Settings -> Config Var | Click 'Reveal Config Vars'
+          KEY               VALUE
+          MONGO_URI         {{MONGO_URI}}         Click 'Add'
+          ...
+      $ git push heroku master|main   // Push app
+    + Heroku GUI
+      - Open app [Select 'App Name' -> Click 'Open app']
