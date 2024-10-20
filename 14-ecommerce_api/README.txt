@@ -271,6 +271,36 @@ E-COMMERCE API
       $ git push heroku master|main   // Push app
     + Heroku GUI
       - Open app [Select 'App Name' -> Click 'Open app']
+  - Render (URL: https://render.com/)
+    + Create an account / Sign in
+    + Remove existing git repo
+      $ rm -rf .git
+    + GitHub
+      - Create new repo [Repositories | Click 'New']
+        > Respository name: temp-node-e-commerce-api
+        > Public
+        Click 'Create repository'
+    + Git Local
+      $ git init
+      $ git add .
+      $ git commit -m "First commit"
+      Push GitHub Reposity
+      $ git remove add orgin git@github.com:{{USERNAME}}/{{REPO_NAME}}.git
+      $ git branch - M main
+      $ git push -u origin main
+    + Render GUI
+      - Create Web Service [Click 'New' -> Web Service]
+        > Create a new Web Service
+          > Connect a reposity: Search... and select repo
+            > Name: node-e-commerce-api
+            > Build Command: $ npm install
+            > Start Command: $ node app.js
+            > Plan Type: Free
+            > Click 'Advanced' -> 'Add Secret File'
+              > Filename: .env
+              Click 'Save'
+        Click 'Create Web Service'
+      - Open URL Application [Dashboard -> Click 'URL_APP']
 
 * Fixes
   - Remove or comment out 'morgan' settings
