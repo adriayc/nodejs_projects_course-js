@@ -41,6 +41,17 @@ E-COMMERCE API
       $ npm i cors
     + Express Fileupload
       $ npm i express-fileupload
+    Extra security packages
+    + Express Rate Limit
+      $ npm i express-rate-limit
+    + Helmet
+      $ npm i helmet
+    + Express XSS Sanitizer
+      $ npm i express-xss-sanitizer
+    + Express Mongoose Sanitize
+      $ npm i express-mongo-sanitize
+    + Cors
+      $ npm i cors
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app

@@ -5,6 +5,11 @@ const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
+// Security packages
+const rateLimiter = require('express-rate-limit');
+const helmet = require('helmet');
+const { xss } = require('express-xss-sanitizer');
+const mongoSanitize = require('express-mongo-sanitize');
 // Database
 const connectDB = require('./db/connect');
 // Routers
@@ -19,12 +24,24 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 
 const app = express();
 
+// Call middleware (Security)
+app.set('trust proxy', 1);
+app.use(
+  rateLimiter({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    limit: 60,
+  })
+);
+app.use(helmet());
+app.use(cors());
+app.use(xss());
+app.use(mongoSanitize());
+
 // Call middleware
 app.use(morgan('tiny')); // HTTP request logger
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(express.static('./public')); // Config static files
-app.use(cors());
 app.use(fileUpload());
 
 // Routes
