@@ -219,4 +219,16 @@ E-COMMERCE API
         && sudo ./uninstall.sh \
         && rm uninstall.sh
   - Commands
-    $ docgen --help             // help for docgen
+    $ docgen --help                               // help for docgen
+    $ docgen build -i docs.json -o index.html     // generate documentation (From the docs.json exported with Postman)
+  - Postman
+    + Export collection [Select collection name 'e-commerce-api' and Click '...' -> Export]
+      > Export collection
+        > collection V2.1
+        Click 'Export
+      > Select path to save file
+        > Save as: {{PATH}}/docs.json
+        Click 'Save'
+  - COPY and PAST 'docs.json' inside root app and generate doc
+  - COPY and PAST 'index.html' inside 'public/' directory
+  - Show doc (URL: http://localhost:5000/)
