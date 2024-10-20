@@ -142,6 +142,25 @@ E-COMMERCE API
         - DELETE
           > DELETE: {{URL}}/reviews/1
           Click 'Send'
+      * Order
+        - POST
+          > POST: {{URL}}/orders
+            Body -> raw -> JSON
+            {}
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/orders
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/orders/showAllMyOrders
+          Click 'Send'
+        - GET
+          > GET: {{URL}}/orders/1
+          Click 'Send'
+        - PATCH
+          > PATCH: {{URL}}/orders/1
+            Body -> raw -> JSON
+            {}
 
 * Front-end (Recct)
   + Install dependencies & Run app
