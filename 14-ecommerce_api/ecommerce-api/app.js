@@ -38,22 +38,13 @@ app.use(xss());
 app.use(mongoSanitize());
 
 // Call middleware
-app.use(morgan('tiny')); // HTTP request logger
+// app.use(morgan('tiny')); // HTTP request logger (Only Dev)
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(express.static('./public')); // Config static files
 app.use(fileUpload());
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('E-commerce API');
-});
-app.get('/api/v1', (req, res) => {
-  // console.log(req.cookies);
-  console.log(req.signedCookies);
-  res.send('E-commerce API with Cookies');
-});
-
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);

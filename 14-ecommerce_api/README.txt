@@ -271,3 +271,18 @@ E-COMMERCE API
       $ git push heroku master|main   // Push app
     + Heroku GUI
       - Open app [Select 'App Name' -> Click 'Open app']
+
+* Fixes
+  - Remove or comment out 'morgan' settings
+    > // app.use(morgan('tiny'))
+  - Modify the prod URL in "docs.json" file, rebuild it and replace it
+    $ docgen build -i docs.json -o index.html     // generate documentation (From the docs.json exported with Postman)
+  - Separate script JS from 'index.html' (Docs)
+    + Righ click -> Format Document With... -> HTML Language Feature
+      > CUT and PASTE script in file 'public/browser-app.js' and remove 'script' tags
+  - Run app
+    $ npm run dev
+  - Heroku CLI
+    $ git add .
+    $ git commit -m "Added fex fixes"
+    $ git push heroku maste
