@@ -58,6 +58,11 @@ const login = async (req, res) => {
     throw new CustomError.UnauthenticatedError('Invalid credentials');
   }
 
+  // Validate is verify
+  if (!user.isVerified) {
+    throw new CustomError.UnauthenticatedError('Please verify your email');
+  }
+
   // Custom user
   const tokenUser = createTokenUser(user);
   // Attach cookie and Token
