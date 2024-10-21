@@ -20,6 +20,8 @@
 - [x] right after isPasswordCorrect
 - [x] check if user.isVerified, if not 401
 
+#### Verify Email - Big Picture
+
 #### Verify Email Controller
 
 - [] create verifyEmail in authController
