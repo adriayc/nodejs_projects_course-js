@@ -2,6 +2,7 @@ const { StatusCodes } = require('http-status-codes');
 const crypto = require('crypto');
 // Models
 const User = require('../models/User');
+const Token = require('../models/Token');
 // Errors
 const CustomError = require('../errors');
 // Utils
@@ -118,10 +119,23 @@ const login = async (req, res) => {
 
   // Custom user
   const tokenUser = createTokenUser(user);
-  // Attach cookie and Token
-  attachCookiesToResponse({ res, user: tokenUser });
 
-  res.status(StatusCodes.OK).json({ user: tokenUser });
+  // Create refresh token
+  let refreshToken = '';
+
+  // Check for existing token
+
+  refreshToken = crypto.randomBytes(40).toString('hex');
+  const ip = req.ip;
+  const userAgent = req.headers['user-agent'];
+  const userToken = { refreshToken, ip, userAgent, user: user._id };
+
+  const token = await Token.create(userToken);
+
+  // Attach cookie and Token
+  // attachCookiesToResponse({ res, user: tokenUser });
+
+  res.status(StatusCodes.OK).json({ user: tokenUser, token });
 };
 
 const logout = (req, res) => {
