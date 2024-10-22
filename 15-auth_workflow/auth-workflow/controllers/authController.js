@@ -37,7 +37,6 @@ const register = async (req, res) => {
   });
 
   // Send email
-  await sendEmail();
 
   // Send verification token back only while testing in postman
   res.status(StatusCodes.CREATED).json({

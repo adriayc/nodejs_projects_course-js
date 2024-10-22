@@ -48,9 +48,9 @@
 
 #### Send Verification Link
 
-- [] refactor sendEmail
-- [] setup sendVerificationEmail.js
-- [] pass arguments
+- [x] refactor sendEmail
+- [x] setup sendVerificationEmail.js
+- [x] pass arguments
 
 #### Token Model
 
