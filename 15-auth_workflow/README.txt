@@ -48,6 +48,8 @@ AUTH WORKFLOW
       $ npm i express-mongo-sanitize
     + Cors
       $ npm i cors
+    + Nodemailer
+      $ npm install nodemailer
   - Uninstall dependencies
     $ npm uninstall <package_name>
   - Run app
