@@ -52,6 +52,8 @@
 - [x] setup sendVerificationEmail.js
 - [x] pass arguments
 
+#### Refresh Token - Big Picture
+
 #### Token Model
 
 - [] create Token.js in models
