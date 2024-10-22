@@ -1,4 +1,6 @@
 const express = require('express');
+// Middlewares
+const { authenticateUser } = require('../middleware/authentication');
 // Controller
 const {
   register,
@@ -11,7 +13,7 @@ const router = express.Router();
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/logout', logout);
+router.delete('/logout', authenticateUser, logout);
 router.post('/verify-email', verifyEmail);
 
 module.exports = router;

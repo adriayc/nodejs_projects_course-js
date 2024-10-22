@@ -152,8 +152,17 @@ const login = async (req, res) => {
   res.status(StatusCodes.OK).json({ user: tokenUser, refreshToken });
 };
 
-const logout = (req, res) => {
-  res.cookie('token', 'logout', {
+const logout = async (req, res) => {
+  // Remove token
+  await Token.findOneAndDelete({ user: req.user.userId });
+
+  // Expire tokens (accessToken and refreshToken)
+  res.cookie('accessToken', 'logout', {
+    // Set the expires to current date (Remove the cookie )
+    expires: new Date(Date.now()),
+    httpOnly: true,
+  });
+  res.cookie('refreshToken', 'logout', {
     // Set the expires to current date (Remove the cookie )
     expires: new Date(Date.now()),
     httpOnly: true,
