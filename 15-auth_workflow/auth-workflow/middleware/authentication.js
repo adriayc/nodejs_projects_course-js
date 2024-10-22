@@ -4,22 +4,36 @@ const { isTokenValid } = require('../utils');
 const CustomError = require('../errors');
 
 const authenticateUser = async (req, res, next) => {
-  // Get token (Cookie that have been signed)
-  const token = req.signedCookies.token;
-
-  if (!token) {
-    throw new CustomError.UnauthenticatedError('Authentication invalid');
-  }
+  const { accessToken, refreshToken } = req.signedCookies;
 
   try {
-    const { userId, name, role } = isTokenValid({ token });
-    req.user = { userId, name, role };
-
-    next();
+    if (accessToken) {
+      const payload = isTokenValid(accessToken);
+      req.user = payload.user;
+      return next();
+    }
   } catch (error) {
     throw new CustomError.UnauthenticatedError('Authentication invalid');
   }
 };
+
+// const authenticateUserSingleToken = async (req, res, next) => {
+//   // Get token (Cookie that have been signed)
+//   const token = req.signedCookies.token;
+
+//   if (!token) {
+//     throw new CustomError.UnauthenticatedError('Authentication invalid');
+//   }
+
+//   try {
+//     const { userId, name, role } = isTokenValid({ token });
+//     req.user = { userId, name, role };
+
+//     next();
+//   } catch (error) {
+//     throw new CustomError.UnauthenticatedError('Authentication invalid');
+//   }
+// };
 
 const authorizePermissions = (...roles) => {
   return (req, res, next) => {
