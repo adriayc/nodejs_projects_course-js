@@ -37,6 +37,21 @@ const register = async (req, res) => {
   });
 
   const origin = 'http://localhost:3000';
+  // const newOrigin = 'https://xxxx.netlify.app'; // Prod
+
+  // Back-end
+  // const tempOrigin = req.get('origin'); // http://localhost:5000
+  // console.log(tempOrigin);
+  // const host = req.get('host'); //localhost:5000
+  // const protocol = req.protocol; // http
+  // console.log(`Host: ${host}`);
+  // console.log(`Protocol: ${protocol}`);
+
+  // Front-end
+  // const forwardedHost = req.get('x-forwarded-host'); // localhost:5000
+  // const forwardedProtocol = req.get('x-forwarded-proto'); // http
+  // console.log(`Forwarded Host: ${forwardedHost}`);
+  // console.log(`Forwarded Protocol: ${forwardedProtocol}`);
 
   // Send email
   await sendVerificationEmail({
