@@ -111,3 +111,9 @@ MongoDB is a popular NoSQL database designed for handling large amounts of unstr
 
 ## JSON Web Token
 A[JSON Web Token (JWT)](https://jwt.io/) is a compact, URL-safe means of representing claims to be brasferred between two parties. It allows you tu verify teh token's authenticity and the identity of the user or service.
+
+## Nodemailer
+[Nodemailer](https://nodemailer.com/) is a module for Node.js application that allows easy email sending.
+
+### Ethereal Email
+[Ethereal](https://ethereal.email/) is a fake SMTP service, mostly aimed at Nodemailer and EmailEngine users (but not limited to).
