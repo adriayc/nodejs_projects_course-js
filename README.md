@@ -102,3 +102,9 @@ Express is a minimal and flexible Node.js web application framework that provide
 ```sh
 $ npm install express --save
 ```
+
+## MongoDB
+MongoDB is a popular NoSQL database designed for handling large amounts of unstructured or semi- structured data. Unlike traditional relational databases that use tables and rows, MongoDB stores data in flexible, JSON-like documents.
+
+## Mongoose
+[Mongoose](https://mongoosejs.com/) is a popular Object Data Modelin (ODM) library for MongoDB and Node.js. Mongoose provides a straightforward way to model your data, manage schema definitions, and interact with MongoDB.
